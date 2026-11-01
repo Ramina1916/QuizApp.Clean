@@ -14,3 +14,19 @@ E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\refint\QuizApp.Application.dll
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.pdb
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\ref\QuizApp.Application.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\bin\Debug\net10.0\QuizApp.Application.deps.json
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\bin\Debug\net10.0\QuizApp.Application.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\bin\Debug\net10.0\QuizApp.Application.pdb
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\bin\Debug\net10.0\QuizApp.Domain.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\bin\Debug\net10.0\QuizApp.Domain.pdb
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.csproj.AssemblyReference.cache
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.AssemblyInfoInputs.cache
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.AssemblyInfo.cs
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.csproj.CoreCompileInputs.cache
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.sourcelink.json
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp..F7D569F9.Up2Date
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\refint\QuizApp.Application.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.pdb
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\ref\QuizApp.Application.dll

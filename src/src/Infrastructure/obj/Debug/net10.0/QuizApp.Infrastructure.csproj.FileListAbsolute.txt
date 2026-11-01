@@ -16,3 +16,21 @@ E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Infrastruct
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\refint\QuizApp.Infrastructure.dll
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\QuizApp.Infrastructure.pdb
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\ref\QuizApp.Infrastructure.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\bin\Debug\net10.0\QuizApp.Infrastructure.deps.json
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\bin\Debug\net10.0\QuizApp.Infrastructure.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\bin\Debug\net10.0\QuizApp.Infrastructure.pdb
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\bin\Debug\net10.0\QuizApp.Application.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\bin\Debug\net10.0\QuizApp.Domain.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\bin\Debug\net10.0\QuizApp.Domain.pdb
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\bin\Debug\net10.0\QuizApp.Application.pdb
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\QuizApp.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\QuizApp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\QuizApp.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\QuizApp.Infrastructure.AssemblyInfo.cs
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\QuizApp.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\QuizApp.Infrastructure.sourcelink.json
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\QuizApp..EB38AC58.Up2Date
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\QuizApp.Infrastructure.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\refint\QuizApp.Infrastructure.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\QuizApp.Infrastructure.pdb
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\ref\QuizApp.Infrastructure.dll

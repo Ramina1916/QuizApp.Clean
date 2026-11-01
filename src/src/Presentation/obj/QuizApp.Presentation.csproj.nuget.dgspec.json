@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Presentation\\QuizApp.Presentation.csproj": {}
+    "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Presentation\\QuizApp.Presentation.csproj": {}
   },
   "projects": {
-    "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj": {
+    "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj",
+        "projectUniqueName": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj",
         "projectName": "QuizApp.Application",
-        "projectPath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj",
+        "projectPath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj",
         "packagesPath": "D:\\NuGetPackages",
-        "outputPath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Application\\obj\\",
+        "outputPath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -34,8 +34,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Domain\\QuizApp.Domain.csproj": {
-                "projectPath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Domain\\QuizApp.Domain.csproj"
+              "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Domain\\QuizApp.Domain.csproj": {
+                "projectPath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Domain\\QuizApp.Domain.csproj"
               }
             }
           }
@@ -350,14 +350,14 @@
         }
       }
     },
-    "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Domain\\QuizApp.Domain.csproj": {
+    "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Domain\\QuizApp.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Domain\\QuizApp.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Domain\\QuizApp.Domain.csproj",
         "projectName": "QuizApp.Domain",
-        "projectPath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Domain\\QuizApp.Domain.csproj",
+        "projectPath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Domain\\QuizApp.Domain.csproj",
         "packagesPath": "D:\\NuGetPackages",
-        "outputPath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -692,14 +692,14 @@
         }
       }
     },
-    "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Infrastructure\\QuizApp.Infrastructure.csproj": {
+    "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Infrastructure\\QuizApp.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Infrastructure\\QuizApp.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Infrastructure\\QuizApp.Infrastructure.csproj",
         "projectName": "QuizApp.Infrastructure",
-        "projectPath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Infrastructure\\QuizApp.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Infrastructure\\QuizApp.Infrastructure.csproj",
         "packagesPath": "D:\\NuGetPackages",
-        "outputPath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -722,11 +722,11 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj": {
-                "projectPath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj"
+              "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj": {
+                "projectPath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj"
               },
-              "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Domain\\QuizApp.Domain.csproj": {
-                "projectPath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Domain\\QuizApp.Domain.csproj"
+              "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Domain\\QuizApp.Domain.csproj": {
+                "projectPath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Domain\\QuizApp.Domain.csproj"
               }
             }
           }
@@ -1041,14 +1041,14 @@
         }
       }
     },
-    "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Presentation\\QuizApp.Presentation.csproj": {
+    "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Presentation\\QuizApp.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Presentation\\QuizApp.Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Presentation\\QuizApp.Presentation.csproj",
         "projectName": "QuizApp.Presentation",
-        "projectPath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Presentation\\QuizApp.Presentation.csproj",
+        "projectPath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Presentation\\QuizApp.Presentation.csproj",
         "packagesPath": "D:\\NuGetPackages",
-        "outputPath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Presentation\\obj\\",
+        "outputPath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1071,11 +1071,11 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj": {
-                "projectPath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj"
+              "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj": {
+                "projectPath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj"
               },
-              "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Infrastructure\\QuizApp.Infrastructure.csproj": {
-                "projectPath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Infrastructure\\QuizApp.Infrastructure.csproj"
+              "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Infrastructure\\QuizApp.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Infrastructure\\QuizApp.Infrastructure.csproj"
               }
             }
           }
