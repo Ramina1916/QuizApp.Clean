@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "QuizApp.Infrastructure/1.0.0": {
+        "dependencies": {
+          "QuizApp.Application": "1.0.0",
+          "QuizApp.Domain": "1.0.0"
+        },
+        "runtime": {
+          "QuizApp.Infrastructure.dll": {}
+        }
+      },
+      "QuizApp.Application/1.0.0": {
+        "dependencies": {
+          "QuizApp.Domain": "1.0.0"
+        },
+        "runtime": {
+          "QuizApp.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "QuizApp.Domain/1.0.0": {
+        "runtime": {
+          "QuizApp.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "QuizApp.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QuizApp.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QuizApp.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

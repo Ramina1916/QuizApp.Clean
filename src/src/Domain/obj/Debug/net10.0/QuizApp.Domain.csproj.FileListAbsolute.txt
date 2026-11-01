@@ -1,0 +1,13 @@
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Domain\bin\Debug\net10.0\QuizApp.Domain.deps.json
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Domain\bin\Debug\net10.0\QuizApp.Domain.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Domain\bin\Debug\net10.0\QuizApp.Domain.pdb
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\QuizApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\QuizApp.Domain.AssemblyInfoInputs.cache
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\QuizApp.Domain.AssemblyInfo.cs
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\QuizApp.Domain.csproj.CoreCompileInputs.cache
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\QuizApp.Domain.sourcelink.json
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\QuizApp.Domain.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\refint\QuizApp.Domain.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\QuizApp.Domain.pdb
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\ref\QuizApp.Domain.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\QuizApp..4BD0E8EA.Up2Date

@@ -1,0 +1,16 @@
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\bin\Debug\net10.0\QuizApp.Application.deps.json
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\bin\Debug\net10.0\QuizApp.Application.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\bin\Debug\net10.0\QuizApp.Application.pdb
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\bin\Debug\net10.0\QuizApp.Domain.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\bin\Debug\net10.0\QuizApp.Domain.pdb
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.csproj.AssemblyReference.cache
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.AssemblyInfoInputs.cache
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.AssemblyInfo.cs
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.csproj.CoreCompileInputs.cache
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.sourcelink.json
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp..F7D569F9.Up2Date
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\refint\QuizApp.Application.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\QuizApp.Application.pdb
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Application\obj\Debug\net10.0\ref\QuizApp.Application.dll
