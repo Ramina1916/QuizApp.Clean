@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "kvB0fKhwgjI=",
+  "dgSpecHash": "NmsNoLDVmIU=",
   "success": true,
   "projectFilePath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Infrastructure\\QuizApp.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "D:\\NuGetPackages\\microsoft.entityframeworkcore\\10.0.14\\microsoft.entityframeworkcore.10.0.14.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.entityframeworkcore.abstractions\\10.0.14\\microsoft.entityframeworkcore.abstractions.10.0.14.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.entityframeworkcore.analyzers\\10.0.14\\microsoft.entityframeworkcore.analyzers.10.0.14.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.caching.abstractions\\10.0.14\\microsoft.extensions.caching.abstractions.10.0.14.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.caching.memory\\10.0.14\\microsoft.extensions.caching.memory.10.0.14.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.dependencyinjection\\10.0.14\\microsoft.extensions.dependencyinjection.10.0.14.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.14\\microsoft.extensions.dependencyinjection.abstractions.10.0.14.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.logging\\10.0.14\\microsoft.extensions.logging.10.0.14.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.logging.abstractions\\10.0.14\\microsoft.extensions.logging.abstractions.10.0.14.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.options\\10.0.14\\microsoft.extensions.options.10.0.14.nupkg.sha512",
+    "D:\\NuGetPackages\\microsoft.extensions.primitives\\10.0.14\\microsoft.extensions.primitives.10.0.14.nupkg.sha512"
+  ],
   "logs": []
 }
