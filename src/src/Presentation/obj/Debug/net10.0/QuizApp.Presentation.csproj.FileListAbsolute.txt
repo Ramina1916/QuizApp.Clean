@@ -212,3 +212,5 @@ C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\refi
 C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.pdb
 C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.genruntimeconfig.cache
 C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\ref\QuizApp.Presentation.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
