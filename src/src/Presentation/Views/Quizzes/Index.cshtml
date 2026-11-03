@@ -1,0 +1,9 @@
+﻿@model IEnumerable<QuizApp.Application.DTOs.Queries.QuizSummaryDto>
+
+@foreach (var quiz in Model)
+{
+    <div class="quiz-summary">
+        <h2>@quiz.Title</h2>
+        <p>@quiz.Category</p>
+    </div>
+}
