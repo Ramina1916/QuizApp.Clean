@@ -22,7 +22,6 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -30,16 +29,22 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
+app.UseAuthentication();   // ← make sure these two are present, in this order
+app.UseAuthorization();
+
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseAuthorization();
 
 app.MapStaticAssets();
 
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Quizzes}/{action=Index}/{id?}")
     .WithStaticAssets();
 
+app.MapRazorPages();
 
 app.Run();
