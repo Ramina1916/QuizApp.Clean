@@ -39,7 +39,7 @@ namespace QuizApp.Application.Services
         public async Task<List<QuizSummaryDto>> GetActiveQuizzesAsync()
         {
             return await _context.Quizzes
-                .Where(q => q.Status == QuizStatus.Active && !q.IsDeleted)
+                .Where(q => q.Status == QuizStatus.Active)
                 .Select(q => new QuizSummaryDto(
                     q.Id,
                     q.Title,
@@ -67,7 +67,6 @@ namespace QuizApp.Application.Services
 
                      // FIX: Added the nested Options projection and .ToList() to both levels
                      Questions: q.Questions
-                         .Where(qq => !qq.IsDeleted) // Hide deleted questions
                          .OrderBy(qq => qq.DisplayOrder)
                          .Select(qq => new QuestionDto(
                              qq.Id,

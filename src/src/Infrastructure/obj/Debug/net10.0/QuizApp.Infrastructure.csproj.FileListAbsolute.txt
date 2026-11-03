@@ -34,3 +34,5 @@ C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\Qu
 C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\refint\QuizApp.Infrastructure.dll
 C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\QuizApp.Infrastructure.pdb
 C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\ref\QuizApp.Infrastructure.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\bin\Debug\net10.0\QuizApp.Infrastructure.runtimeconfig.json
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Infrastructure\obj\Debug\net10.0\QuizApp.Infrastructure.genruntimeconfig.cache

@@ -1,6 +1,6 @@
 ﻿using QuizApp.Domain.Enums;
 
-namespace QuizApp.Application.DTOs.Commands
+namespace QuizApp.Application.DTOs.Commands // Command DTOs are used to encapsulate data for creating or updating entities in the application layer.
 {
     public record CreateQuizCommand(
         string Title,
