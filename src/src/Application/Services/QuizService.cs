@@ -18,7 +18,7 @@ namespace QuizApp.Application.Services
             _context = context;
         }
 
-        public async Task<int> CreateQuizAsync(CreateQuizCommand command, string userId)
+        public async Task<int> CreateQuizAsync(CreateQuizDto command, string userId)
         {
             var quiz = new Domain.Entities.Quiz
             {
