@@ -10,5 +10,6 @@ namespace QuizApp.Application.DTOs.Queries
          int QuizId,
          string Title,
          int TimeLimitMinutes,
-         List<TakeQuestionDto> Questions);
+         List<TakeQuestionDto> Questions
+        );
 }

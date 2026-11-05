@@ -14,6 +14,8 @@ builder.Services.AddDbContext<IApplicationDbContext, ApplicationDbContext>(
         builder.Configuration.GetConnectionString("DefaultConnection"))); // get the directory from appsettings.json
 
 builder.Services.AddScoped<IQuizService, QuizService>();
+builder.Services.AddScoped<IQuizAttemptService, QuizAttemptService>();
+builder.Services.AddScoped<IQuizGradingService, QuizGradingService>();
 
 // Add Identity services to the container
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>
