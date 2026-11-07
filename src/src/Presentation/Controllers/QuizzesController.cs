@@ -63,11 +63,11 @@ namespace QuizApp.Presentation.Controllers
 
         [HttpGet]
         [Authorize]
-        public async Task<IActionResult> Results(int attemptId)
+        public async Task<IActionResult> Results(int id)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId is null) return Forbid();
-            var dto = await _quizAttemptService.GetResultAsync(attemptId, userId);
+            var dto = await _quizAttemptService.GetResultAsync(id, userId);
             if (dto is null) return NotFound();  
             return View(dto);
         }
