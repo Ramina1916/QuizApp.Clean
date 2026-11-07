@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using QuizApp.Application.DTOs.Commands;
 using QuizApp.Application.Interfaces;
 using System.Security.Claims;
@@ -80,6 +81,28 @@ namespace QuizApp.Presentation.Controllers
             if (userId is null) return Forbid();
             var dtos = await _quizAttemptService.GetHistoryAsync(userId);
             return View(dtos);   
+        }
+
+        [HttpGet]
+        [Authorize]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(CreateQuizDto model)
+        {
+            if (!ModelState.IsValid) return View(model); 
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId is null) return Forbid();
+
+            var newQuizId = await _quizService.CreateQuizAsync(model, userId);
+
+            return RedirectToAction(nameof(Details), new { id = newQuizId});
         }
     }
 }

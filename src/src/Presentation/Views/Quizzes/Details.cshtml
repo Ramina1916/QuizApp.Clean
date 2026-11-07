@@ -1,0 +1,53 @@
+﻿@model QuizApp.Application.DTOs.Queries.QuizDetailsDto
+
+@{
+    ViewData["Title"] = "Quiz Details";
+}
+
+<div class="page-container">
+    <a asp-controller="Quizzes" asp-action="Index">← Back to quizzes</a>
+
+    <div class="quiz-detail-hero">
+        <h1>@Model.Title</h1>
+        <p>
+            @(Model.Description ?? "No description provided.")
+        </p>
+        <div class="quiz-detail-stats">
+            <span>@Model.Questions.Count questions</span>
+            <span>@Model.TimeLimitMinutes minutes</span>
+            <span>@Model.Difficulty</span>
+        </div>
+    </div>
+
+    <h2>Questions</h2>
+
+    @if (!Model.Questions.Any())
+    {
+        <p>This quiz has no questions yet.</p>
+    }
+    else
+    {
+        @foreach (var question in Model.Questions)
+        {
+            <div class="question-preview">
+                <span>@question.Text</span>
+                <span>@question.QuestionType</span>
+                <span>@question.Points pts</span>
+            </div>
+        }
+    }
+
+    <a class="btn btn-primary"
+       asp-controller="Quizzes" asp-action="Take" asp-route-id="@Model.Id">
+        Start Quiz
+    </a>
+    <!-- Only show this button if the logged-in user created the quiz -->
+    @if (Model.IsOwner)
+    {
+        <a asp-action="AddQuestion" asp-route-quizId="@Model.Id" class="btn btn-secondary">
+            + Add Question
+        </a>
+
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit Details</a>
+    }
+</div>

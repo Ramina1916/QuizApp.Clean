@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using QuizApp.Application.Interfaces;
 using QuizApp.Application.Services;
 using QuizApp.Infrastructure.Persistence;
+using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,8 +45,9 @@ app.MapStaticAssets();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Quizzes}/{action=Index}/{id?}")
-    .WithStaticAssets();
+    pattern: "{controller=Quizzes}/{action=Index}/{id?}"
+    ).WithStaticAssets();
+
 
 app.MapRazorPages();
 
