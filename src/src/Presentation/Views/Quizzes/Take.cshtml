@@ -1,0 +1,87 @@
+﻿@model QuizApp.Application.DTOs.Queries.TakeQuizDto
+
+@{
+    ViewData["Title"] = "Take Quiz";
+}
+
+<!-- STICKY TIMER HEADER -->
+<div class="timer-sticky">
+    <div>
+        <h4 class="mb-0">@Model.Title</h4>
+        <small class="text-muted">Answer carefully. The quiz auto-submits when time runs out.</small>
+    </div>
+    <div class="timer-display" id="countdown">
+        Loading...
+    </div>
+</div>
+
+<div class="container py-5">
+    <form asp-action="Submit" method="post" id="quizForm">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="QuizId" value="@Model.QuizId" />
+
+        @for (int i = 0; i < Model.Questions.Count; i++)
+        {
+            <div class="question-block">
+                <h5>Question @(i + 1)</h5>
+                <p>@Model.Questions[i].Text</p>
+
+                <!-- hidden field -->
+                <input type="hidden" name="Submissions[@i].QuestionId" value="@Model.Questions[i].QuestionId" />
+
+                @if (Model.Questions[i].QuestionType == QuizApp.Domain.Enums.QuestionType.ShortAnswer)
+                {
+                    <input type="text" name="Submissions[@i].UserAnswer" class="form-control" />
+                }
+                else
+                {
+                    @foreach (var option in Model.Questions[i].Options)
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio"
+                                   name="Submissions[@i].SelectedOptionId"
+                                   value="@option.Id" id="opt_@option.Id" />
+                            <label class="form-check-label" for="opt_@option.Id">@option.Text</label>
+                        </div>
+                    }
+                }
+            </div>
+        }
+
+        <button type="submit" class="btn btn-primary">Submit Quiz</button>
+    </form>
+</div>
+
+<!-- JAVASCRIPT TIMER LOGIC -->
+<script>
+    // 1. Get time from Model (converted to seconds)
+    let timeLeft = @Model.TimeLimitMinutes * 60;
+    const display = document.getElementById('countdown');
+    const form = document.getElementById('quizForm');
+
+    function updateTimer() {
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+
+        // Format: 09:05
+        display.innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+        // Visual warning when < 1 minute
+        if (timeLeft < 60) {
+            display.classList.add('urgent');
+        }
+
+        // Auto-submit when time is up
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            alert("Time is up! Submitting your quiz...");
+            form.submit();
+        }
+
+        timeLeft--;
+    }
+
+    // Run immediately, then every second
+    updateTimer();
+    const timerInterval = setInterval(updateTimer, 1000);
+</script>
