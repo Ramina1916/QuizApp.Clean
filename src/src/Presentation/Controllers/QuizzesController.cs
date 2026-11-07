@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using QuizApp.Application.DTOs.Commands;
+using QuizApp.Application.DTOs.Attempt;
+using QuizApp.Application.DTOs.Quiz;
 using QuizApp.Application.Interfaces;
 using System.Security.Claims;
 

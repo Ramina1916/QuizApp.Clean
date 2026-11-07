@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using QuizApp.Application.DTOs.Commands;
-using QuizApp.Application.DTOs.Queries;
+using QuizApp.Application.DTOs.Quiz;
 using QuizApp.Application.Interfaces;
 using QuizApp.Domain.Enums;
 namespace QuizApp.Application.Services
@@ -63,9 +62,7 @@ namespace QuizApp.Application.Services
                      q.Category,
                      q.Difficulty,
                      q.TimeLimitMinutes,
-                     IsOwner: q.CreatedByUserId == userId, // Computed from the parameter, perfectly clean
-
-                     // FIX: Added the nested Options projection and .ToList() to both levels
+                     IsOwner: q.CreatedByUserId == userId, 
                      Questions: q.Questions
                          .OrderBy(qq => qq.DisplayOrder)
                          .Select(qq => new QuestionDto(
@@ -82,5 +79,15 @@ namespace QuizApp.Application.Services
                  .FirstOrDefaultAsync(); // used instead of find() to ensure that the query is executed on the database side and returns a single result or null if not found.
             // find() make the query execute on the client side, which can lead to performance issues and unexpected behavior when working with related entities.
         }
+
+        public async Task<int> AddQuestionsAsync(int quizId, string userId, List<CreateQuestion> newQuestions)
+        {
+            var quiz = await _context.Quizzes
+                .Where(q => q.Id == quizId && q.CreatedByUserId == userId && q.Status == QuizStatus.Draft)
+                .FirstOrDefaultAsync();
+            var question = new CreateQuestion(
+                );
+        }
+
     }
 }

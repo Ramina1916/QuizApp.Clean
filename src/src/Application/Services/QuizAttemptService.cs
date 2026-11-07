@@ -1,13 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
-using QuizApp.Application.DTOs.Commands;
-using QuizApp.Application.DTOs.Queries;
+using QuizApp.Application.DTOs.Attempt;
+using QuizApp.Application.DTOs.Quiz;
+using QuizApp.Application.DTOs.Grading;
 using QuizApp.Application.Interfaces;
 using QuizApp.Domain.Entities;
 using QuizApp.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QuizApp.Application.Services
 {

@@ -1,6 +1,6 @@
 ﻿using QuizApp.Domain.Enums;
 
-namespace QuizApp.Application.DTOs.Queries
+namespace QuizApp.Application.DTOs.Quiz
 {
     public record QuizSummaryDto(
     /*           

@@ -1,9 +1,8 @@
-﻿using QuizApp.Application.DTOs.Commands;
+﻿using QuizApp.Application.DTOs.Attempt;
+using QuizApp.Application.DTOs.Grading;
 using QuizApp.Application.Interfaces;
 using QuizApp.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace QuizApp.Application.Services
 {

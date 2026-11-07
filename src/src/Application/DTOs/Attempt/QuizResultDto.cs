@@ -1,9 +1,9 @@
-﻿using QuizApp.Application.DTOs.Commands;
+﻿using QuizApp.Application.DTOs.Grading;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace QuizApp.Application.DTOs.Queries
+namespace QuizApp.Application.DTOs.Attempt
 {
 
     public record QuizResultDto(

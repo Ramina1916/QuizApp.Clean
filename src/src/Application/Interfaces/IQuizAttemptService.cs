@@ -1,5 +1,4 @@
-﻿using QuizApp.Application.DTOs.Queries;
-using QuizApp.Application.DTOs.Commands;
+﻿using QuizApp.Application.DTOs.Attempt;
 
 namespace QuizApp.Application.Interfaces
 {

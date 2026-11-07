@@ -1,4 +1,4 @@
-﻿namespace QuizApp.Application.DTOs.Queries // Query DTOs are used to transfer data from the application layer to the presentation layer, specifically for query operations.
+﻿namespace QuizApp.Application.DTOs.Quiz // Query DTOs are used to transfer data from the application layer to the presentation layer, specifically for query operations.
 {
     public record AnswerOptionDto(
         /*

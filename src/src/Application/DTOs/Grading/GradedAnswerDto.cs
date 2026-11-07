@@ -1,4 +1,4 @@
-﻿namespace QuizApp.Application.DTOs.Commands
+﻿namespace QuizApp.Application.DTOs.Grading
 {
     // a record that represents a graded answer to a question in a quiz
     public record GradedAnswerDto(

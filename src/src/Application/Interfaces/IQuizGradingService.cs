@@ -1,5 +1,6 @@
 ﻿using QuizApp.Domain.Entities;
-using QuizApp.Application.DTOs.Commands;
+using QuizApp.Application.DTOs.Grading;
+using QuizApp.Application.DTOs.Attempt;
 
 namespace QuizApp.Application.Interfaces
 {

@@ -1,6 +1,7 @@
-﻿using QuizApp.Domain.Enums;
+﻿using QuizApp.Application.DTOs.Quiz;
+using QuizApp.Domain.Enums;
 
-namespace QuizApp.Application.DTOs.Queries
+namespace QuizApp.Application.DTOs.Attempt
 
 {
     public record TakeQuestionDto(

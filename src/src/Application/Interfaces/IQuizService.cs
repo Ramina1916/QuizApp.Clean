@@ -1,5 +1,4 @@
-﻿using QuizApp.Application.DTOs.Queries;
-using QuizApp.Application.DTOs.Commands;
+﻿using QuizApp.Application.DTOs.Quiz;
 
 namespace QuizApp.Application.Interfaces
 {
@@ -13,5 +12,8 @@ namespace QuizApp.Application.Interfaces
         Task<List<QuizSummaryDto>> GetActiveQuizzesAsync();
         Task<QuizDetailsDto?> GetQuizDetailsAsync(int quizId, string userId);
         Task<int> CreateQuizAsync(CreateQuizDto command, string userId);
+        Task<int> AddQuestionsAsync(int quizId, string userId, List<CreateQuestion> newQuestions); // pass quizId
+
+        Task<int> RemoveQuestionAsync(int questionId, string userId); // pass questionId
     }
 }
