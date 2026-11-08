@@ -1,5 +1,4 @@
 ﻿using QuizApp.Application.DTOs.Quiz;
-
 namespace QuizApp.Application.Interfaces
 {
     public interface IQuizService
@@ -12,8 +11,10 @@ namespace QuizApp.Application.Interfaces
         Task<List<QuizSummaryDto>> GetActiveQuizzesAsync();
         Task<QuizDetailsDto?> GetQuizDetailsAsync(int quizId, string userId);
         Task<int> CreateQuizAsync(CreateQuizDto command, string userId);
-        Task<int> AddQuestionsAsync(int quizId, string userId, List<CreateQuestion> newQuestions); // pass quizId
+        Task<int> AddQuestionsAsync(int quizId, string userId, List<CreateQuestionDto> newQuestions); // pass quizId
 
-        Task<int> RemoveQuestionAsync(int questionId, string userId); // pass questionId
+        Task<int> RemoveQuestionAsync(int questionId, int quizId, string userId); // pass questionId
+
+        Task RemoveQuizAsync(int quizId, string userId);
     }
 }

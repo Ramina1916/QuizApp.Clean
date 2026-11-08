@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using QuizApp.Application.DTOs.Quiz;
 using QuizApp.Application.Interfaces;
+using QuizApp.Domain.Entities;
 using QuizApp.Domain.Enums;
 namespace QuizApp.Application.Services
 {
@@ -19,7 +20,7 @@ namespace QuizApp.Application.Services
 
         public async Task<int> CreateQuizAsync(CreateQuizDto command, string userId)
         {
-            var quiz = new Domain.Entities.Quiz
+            var quiz = new Quiz
             {
                 Title = command.Title,
                 Description = command.Description,
@@ -53,7 +54,7 @@ namespace QuizApp.Application.Services
 
         public async Task<QuizDetailsDto?> GetQuizDetailsAsync(int quizId, string userId)
         {
-            return  await _context.Quizzes
+            return await _context.Quizzes
                  .Where(q => q.Id == quizId && (q.Status == QuizStatus.Active || q.CreatedByUserId == userId))
                  .Select(q => new QuizDetailsDto(
                      q.Id,
@@ -62,7 +63,7 @@ namespace QuizApp.Application.Services
                      q.Category,
                      q.Difficulty,
                      q.TimeLimitMinutes,
-                     IsOwner: q.CreatedByUserId == userId, 
+                     IsOwner: q.CreatedByUserId == userId,
                      Questions: q.Questions
                          .OrderBy(qq => qq.DisplayOrder)
                          .Select(qq => new QuestionDto(
@@ -80,14 +81,64 @@ namespace QuizApp.Application.Services
             // find() make the query execute on the client side, which can lead to performance issues and unexpected behavior when working with related entities.
         }
 
-        public async Task<int> AddQuestionsAsync(int quizId, string userId, List<CreateQuestion> newQuestions)
+        public async Task<int> AddQuestionsAsync(int quizId, string userId, List<CreateQuestionDto> newQuestions)
         {
             var quiz = await _context.Quizzes
                 .Where(q => q.Id == quizId && q.CreatedByUserId == userId && q.Status == QuizStatus.Draft)
                 .FirstOrDefaultAsync();
-            var question = new CreateQuestion(
-                );
+
+            ArgumentNullException.ThrowIfNull(quiz);
+
+            var Order = await _context.Questions.CountAsync(q => q.QuizId == quizId);
+            foreach (CreateQuestionDto question in newQuestions)
+            {
+                List<AnswerOption> answerOptions = new List<AnswerOption>();
+                foreach (OptionSlotDto optionSlot in question.Options)
+                {
+                    answerOptions.Add(new AnswerOption { Text = optionSlot.Text, IsCorrect = optionSlot.IsCorrect });
+                }
+                var newQuestion = new Question
+                {
+                    QuizId = quizId,
+                    Text = question.Text,
+                    QuestionType = question.QuestionType,
+                    DisplayOrder = Order++,
+                    Points = question.Points,
+                    Options = answerOptions
+                };
+                await _context.Questions.AddAsync(newQuestion);
+            }
+            await _context.SaveChangesAsync();
+            return quizId;
         }
 
+        public async Task<int> RemoveQuestionAsync(int questionId, int quizId, string userId)
+        {
+            var question = await _context.Questions
+                .Where(q => q.Id == questionId && q.QuizId == quizId && q.Quiz.CreatedByUserId == userId) // No !q.IsDeleted because of Global Filter
+                .FirstAsync();
+
+            ArgumentNullException.ThrowIfNull(question);
+
+            question.IsDeleted = true;
+            question.DeletedAt = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+            return question.Id;
+        }
+
+        public async Task RemoveQuizAsync(int quizId, string userId)
+        {
+            var quiz = await _context.Quizzes
+                .Where(q => q.Id == quizId && q.CreatedByUserId == userId)
+                .FirstOrDefaultAsync();
+
+            ArgumentNullException.ThrowIfNull(quiz);
+
+            quiz.IsDeleted = true;
+            quiz.DeletedAt = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+        }
     }
 }
