@@ -83,31 +83,30 @@ namespace QuizApp.Application.Services
 
         public async Task<int> AddQuestionsAsync(int quizId, string userId, List<CreateQuestionDto> newQuestions)
         {
-            var quiz = await _context.Quizzes
-                .Where(q => q.Id == quizId && q.CreatedByUserId == userId && q.Status == QuizStatus.Draft)
-                .FirstOrDefaultAsync();
+            if (!await _context.Quizzes.AnyAsync(q =>
+                    q.Id == quizId && q.CreatedByUserId == userId && q.Status == QuizStatus.Draft))
+                throw new InvalidOperationException("Quiz not found or not editable.");
 
-            ArgumentNullException.ThrowIfNull(quiz);
+            var order = await _context.Questions.CountAsync(q => q.QuizId == quizId);
 
-            var Order = await _context.Questions.CountAsync(q => q.QuizId == quizId);
-            foreach (CreateQuestionDto question in newQuestions)
+            foreach (var question in newQuestions)
             {
-                List<AnswerOption> answerOptions = new List<AnswerOption>();
-                foreach (OptionSlotDto optionSlot in question.Options)
-                {
-                    answerOptions.Add(new AnswerOption { Text = optionSlot.Text, IsCorrect = optionSlot.IsCorrect });
-                }
                 var newQuestion = new Question
                 {
                     QuizId = quizId,
                     Text = question.Text,
                     QuestionType = question.QuestionType,
-                    DisplayOrder = Order++,
+                    DisplayOrder = order++,
                     Points = question.Points,
-                    Options = answerOptions
+                    Options = question.Options.Select(o => new AnswerOption
+                    {
+                        Text = o.Text,
+                        IsCorrect = o.IsCorrect   
+                    }).ToList()
                 };
-                await _context.Questions.AddAsync(newQuestion);
+                _context.Questions.Add(newQuestion); 
             }
+
             await _context.SaveChangesAsync();
             return quizId;
         }
@@ -115,25 +114,29 @@ namespace QuizApp.Application.Services
         public async Task<int> RemoveQuestionAsync(int questionId, int quizId, string userId)
         {
             var question = await _context.Questions
-                .Where(q => q.Id == questionId && q.QuizId == quizId && q.Quiz.CreatedByUserId == userId) // No !q.IsDeleted because of Global Filter
-                .FirstAsync();
+                .Where(q => q.Id == questionId && q.QuizId == quizId
+                         && q.Quiz.CreatedByUserId == userId
+                         && q.Quiz.Status == QuizStatus.Draft)  
+                .FirstOrDefaultAsync();                         
 
-            ArgumentNullException.ThrowIfNull(question);
+            if (question is null)
+                throw new InvalidOperationException("Question not found or not editable.");
 
             question.IsDeleted = true;
             question.DeletedAt = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();
-            return question.Id;
+            return quizId;                                    
         }
 
         public async Task RemoveQuizAsync(int quizId, string userId)
         {
             var quiz = await _context.Quizzes
                 .Where(q => q.Id == quizId && q.CreatedByUserId == userId)
-                .FirstOrDefaultAsync();
+                .FirstOrDefaultAsync();                                   
 
-            ArgumentNullException.ThrowIfNull(quiz);
+            if (quiz is null)
+                throw new InvalidOperationException("Quiz not found or not yours.");
 
             quiz.IsDeleted = true;
             quiz.DeletedAt = DateTime.UtcNow;
