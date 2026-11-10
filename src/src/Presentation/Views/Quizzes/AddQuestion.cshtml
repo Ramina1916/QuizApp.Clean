@@ -7,15 +7,13 @@
 <div class="page-container">
     <h1>Add Question</h1>
 
-    <form asp-action="AddQuestions" method="post">
+    <form asp-action="AddQuestions" method="post" id="questionForm">
         @Html.AntiForgeryToken()
-        <!-- Hidden field to pass the QuizId back to the controller -->
         <input type="hidden" name="quizId" value="@ViewBag.QuizId" />
 
-        @* Loop through the list (currently just 1 item) *@
         @for (int i = 0; i < Model.Count; i++)
         {
-            <div class="question-block border p-3 mb-3">
+            <div class="question-block border p-3 mb-3" data-question-index="@i">
                 <h4>Question @(i + 1)</h4>
 
                 <div class="mb-3">
@@ -27,7 +25,7 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label asp-for="@Model[i].QuestionType" class="form-label">Type</label>
-                        <select asp-for="@Model[i].QuestionType" class="form-select"
+                        <select asp-for="@Model[i].QuestionType" class="form-select question-type-select"
                                 asp-items="Html.GetEnumSelectList<QuizApp.Domain.Enums.QuestionType>()">
                         </select>
                     </div>
@@ -37,32 +35,233 @@
                     </div>
                 </div>
 
-                <h5>Options</h5>
-                @* Nested loop for options *@
-                @for (int j = 0; j < Model[i].Options.Count; j++)
-                {
-                    <div class="row mb-2 align-items-center">
-                        <div class="col-md-1">
-                            <div class="form-check">
-                                <input asp-for="@Model[i].Options[j].IsCorrect" class="form-check-input" type="checkbox" />
-                                <label class="form-check-label" for="@Html.IdFor(m => m[i].Options[j].IsCorrect)">Correct?</label>
+                <!-- SHORT ANSWER: Dynamic Acceptable Answers -->
+                <div class="sa-options-section" style="display:none;">
+                    <h5>Acceptable Answers <small class="text-muted">(At least one required)</small></h5>
+                    <div class="options-container">
+                        @for (int j = 0; j < Model[i].Options.Count; j++)
+                        {
+                            <div class="option-item d-flex align-items-center mb-2">
+                                <input type="hidden" name="questions[@i].Options[@j].IsCorrect" value="true" />
+                                <input type="text" name="questions[@i].Options[@j].Text" class="form-control me-2"
+                                       placeholder="Acceptable answer" value="@Model[i].Options[j].Text" />
+                                <button type="button" class="btn btn-outline-danger btn-sm remove-option" title="Remove">
+                                    &times;
+                                </button>
                             </div>
-                        </div>
-                        <div class="col-md-11">
-                            <input asp-for="@Model[i].Options[j].Text" class="form-control" placeholder="Option text" />
-                        </div>
+                        }
                     </div>
-                }
+                    <button type="button" class="btn btn-sm btn-outline-primary mt-2 add-option-btn" data-type="sa">
+                        + Add Acceptable Answer
+                    </button>
+                </div>
+
+                <!-- MULTIPLE CHOICE: Dynamic Options with RADIO BUTTONS (one correct only) -->
+                <div class="mc-options-section">
+                    <h5>Options <small class="text-muted">(At least two required, select exactly one correct)</small></h5>
+                    <div class="options-container">
+                        @for (int j = 0; j < Model[i].Options.Count; j++)
+                        {
+                            <div class="option-item d-flex align-items-center mb-2">
+                                <div class="form-check me-2">
+                                    <!-- Use RADIO buttons with a unique group name per question -->
+                                    <input class="form-check-input" type="radio"
+                                           name="questions[@i].CorrectOptionIndex"
+                                           value="@j"
+                                           id="mc_correct_@i\_@j"
+                                    @(Model[i].Options[j].IsCorrect ? "checked" : "") />
+                                    <label class="form-check-label" for="mc_correct_@i\_@j">Correct?</label>
+                                </div>
+                                <input asp-for="@Model[i].Options[j].Text" class="form-control me-2" placeholder="Option text" />
+                                <button type="button" class="btn btn-outline-danger btn-sm remove-option" title="Remove">
+                                    &times;
+                                </button>
+                            </div>
+                        }
+                    </div>
+                    <button type="button" class="btn btn-sm btn-outline-primary mt-2 add-option-btn" data-type="mc">
+                        + Add Option
+                    </button>
+                </div>
+
+                <!-- TRUE/FALSE: Fixed -->
+                <div class="tf-options-section" style="display:none;">
+                    <h5>Correct Answer</h5>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="questions[@i].Options[0].IsCorrect" id="tf_true_@i" value="true" />
+                        <label class="form-check-label" for="tf_true_@i">True</label>
+                        <input type="hidden" name="questions[@i].Options[0].Text" value="True" />
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="questions[@i].Options[1].IsCorrect" id="tf_false_@i" value="false" />
+                        <label class="form-check-label" for="tf_false_@i">False</label>
+                        <input type="hidden" name="questions[@i].Options[1].Text" value="False" />
+                    </div>
+                </div>
+
+                <!-- Validation Summary -->
+                <div class="alert alert-danger mt-3 d-none" role="alert"></div>
             </div>
         }
 
-        <div class="d-flex gap-2">
+        <div class="d-flex gap-2 mt-4">
             <button type="submit" class="btn btn-primary">Save Question</button>
             <a asp-action="Details" asp-route-id="@ViewBag.QuizId" class="btn btn-secondary">Cancel</a>
         </div>
     </form>
 </div>
 
+<!-- TEMPLATES FOR DYNAMIC CLONING -->
+<script type="text/template" id="mc-option-template">
+    <div class="option-item d-flex align-items-center mb-2">
+        <div class="form-check me-2">
+            <input class="form-check-input" type="radio"
+                   name="questions[__QINDEX__].CorrectOptionIndex"
+                   value="__OINDEX__"
+                   id="mc_correct___QINDEX____OINDEX__" />
+            <label class="form-check-label" for="mc_correct___QINDEX____OINDEX__">Correct?</label>
+        </div>
+        <input type="text" class="form-control me-2" name="questions[__QINDEX__].Options[__OINDEX__].Text" placeholder="Option text" />
+        <button type="button" class="btn btn-outline-danger btn-sm remove-option" title="Remove">&times;</button>
+    </div>
+</script>
+
+<script type="text/template" id="sa-option-template">
+    <div class="option-item d-flex align-items-center mb-2">
+        <input type="hidden" name="questions[__QINDEX__].Options[__OINDEX__].IsCorrect" value="true" />
+        <input type="text" class="form-control me-2" name="questions[__QINDEX__].Options[__OINDEX__].Text" placeholder="Acceptable answer" />
+        <button type="button" class="btn btn-outline-danger btn-sm remove-option" title="Remove">&times;</button>
+    </div>
+</script>
+
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('questionForm');
+
+            // 1. Toggle Visibility based on Question Type
+            document.querySelectorAll('.question-type-select').forEach(select => {
+                const updateVisibility = () => {
+                    const block = select.closest('.question-block');
+                    const type = select.value; // "1"=MultipleChoice, "2"=TrueFalse, "3"=ShortAnswer
+
+                    // Hide ALL sections first
+                    block.querySelector('.mc-options-section').style.display = 'none';
+                    block.querySelector('.sa-options-section').style.display = 'none';
+                    block.querySelector('.tf-options-section').style.display = 'none';
+
+                    // Show the selected one
+                    if (type === '1') {
+                        block.querySelector('.mc-options-section').style.display = 'block';
+                    } else if (type === '3') {
+                        block.querySelector('.sa-options-section').style.display = 'block';
+                    } else if (type === '2') {
+                        block.querySelector('.tf-options-section').style.display = 'block';
+                    }
+
+                    // Clear validation errors when type changes
+                    block.querySelector('.alert-danger').classList.add('d-none');
+                };
+
+                // Run on load AND on change
+                updateVisibility();
+                select.addEventListener('change', updateVisibility);
+            });
+
+            // 2. Dynamic Add Option
+            form.addEventListener('click', function(e) {
+                if (e.target.classList.contains('add-option-btn')) {
+                    const block = e.target.closest('.question-block');
+                    const qIndex = block.getAttribute('data-question-index');
+                    const type = e.target.getAttribute('data-type');
+                    const uniqueIndex = Date.now().toString() + Math.random().toString(36).substr(2, 5);
+
+                    const templateId = type === 'mc' ? 'mc-option-template' : 'sa-option-template';
+                    let html = document.getElementById(templateId).innerHTML;
+
+                    // Replace placeholders
+                    html = html.replace(/__QINDEX__/g, qIndex).replace(/__OINDEX__/g, uniqueIndex);
+
+                    // Insert into the VISIBLE container
+                    const container = type === 'mc'
+                        ? block.querySelector('.mc-options-section .options-container')
+                        : block.querySelector('.sa-options-section .options-container');
+
+                    container.insertAdjacentHTML('beforeend', html);
+                }
+            });
+
+            // 3. Dynamic Remove Option
+            form.addEventListener('click', function(e) {
+                if (e.target.classList.contains('remove-option')) {
+                    const block = e.target.closest('.question-block');
+                    const type = block.querySelector('.question-type-select').value;
+
+                    // Determine which container we're in
+                    const container = type === '1' // MultipleChoice
+                        ? block.querySelector('.mc-options-section .options-container')
+                        : block.querySelector('.sa-options-section .options-container');
+
+                    // Prevent removing below minimum (2 for MC, 1 for SA)
+                    const minOptions = type === '1' ? 2 : 1;
+
+                    if (container.children.length <= minOptions) {
+                        alert(type === '1'
+                            ? "Multiple Choice requires at least two options."
+                            : "Short Answer requires at least one acceptable answer.");
+                        return;
+                    }
+
+                    e.target.closest('.option-item').remove();
+                }
+            });
+
+            // 4. Client-Side Validation on Submit
+            form.addEventListener('submit', function(e) {
+                let isValid = true;
+
+                document.querySelectorAll('.question-block').forEach(block => {
+                    const type = block.querySelector('.question-type-select').value;
+                    const errorDiv = block.querySelector('.alert-danger');
+                    errorDiv.classList.add('d-none');
+                    let errorMsg = "";
+
+                    if (type === '1') { // Multiple Choice
+                        const options = block.querySelectorAll('.mc-options-section .option-item');
+                        const correctRadio = block.querySelector('.mc-options-section input[type="radio"]:checked');
+                        const hasText = Array.from(options).some(opt => opt.querySelector('input[type="text"]').value.trim() !== "");
+
+                        if (options.length < 2) errorMsg = "Multiple Choice requires at least two options.";
+                        else if (!hasText) errorMsg = "Multiple Choice options cannot be entirely blank.";
+                        else if (!correctRadio) errorMsg = "Multiple Choice requires exactly ONE correct answer to be selected.";
+                    }
+                    else if (type === '3') { // Short Answer
+                        const answers = block.querySelectorAll('.sa-options-section .option-item');
+                        const hasText = Array.from(answers).some(ans => ans.querySelector('input[type="text"]').value.trim() !== "");
+
+                        if (answers.length < 1 || !hasText) errorMsg = "Short Answer requires at least one non-empty acceptable answer.";
+                    }
+                    else if (type === '2') { // True/False
+                        const radios = block.querySelectorAll('.tf-options-section input[type="radio"]');
+                        const hasSelected = Array.from(radios).some(r => r.checked);
+                        if (!hasSelected) errorMsg = "True/False requires you to select the correct answer.";
+                    }
+
+                    if (errorMsg) {
+                        errorDiv.textContent = errorMsg;
+                        errorDiv.classList.remove('d-none');
+                        isValid = false;
+                    }
+                });
+
+                if (!isValid) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 }

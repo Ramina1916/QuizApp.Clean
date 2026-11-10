@@ -1,5 +1,7 @@
 ﻿@model IEnumerable<QuizApp.Application.DTOs.Quiz.QuizSummaryDto>
-
+@{
+    ViewData["Title"] = "Quizzes";
+}
 @foreach (var quiz in Model)
 {
     <div class="quiz-summary">

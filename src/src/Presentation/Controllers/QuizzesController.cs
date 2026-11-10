@@ -110,13 +110,13 @@ namespace QuizApp.Presentation.Controllers
         [Authorize]
         public IActionResult AddQuestion(int quizId)
         {
-            // Initialize with one empty question and 2 empty options (standard for MCQ)
             var model = new List<CreateQuestionDto>
             {
                 new CreateQuestionDto(
                     Text: "",
                     QuestionType: Domain.Enums.QuestionType.MultipleChoice,
                     Points: 1,
+                    // Start with 2 options for MC, 1 for SA (handled by JS visibility)
                     Options: new List<OptionSlotDto>
                     {
                         new OptionSlotDto("", false),
@@ -124,7 +124,7 @@ namespace QuizApp.Presentation.Controllers
                     }
                 )
             };
-            ViewBag.QuizId = quizId; // Pass ID to the view for the form action
+            ViewBag.QuizId = quizId;
             return View(model);
         }
 
@@ -188,6 +188,7 @@ namespace QuizApp.Presentation.Controllers
         public async Task<IActionResult> Publish(int id)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId is null) return Forbid();
             try
             {
                 await _quizService.PublishAsync(id, userId);

@@ -84,14 +84,45 @@ namespace QuizApp.Application.Services
 
         public async Task<int> AddQuestionsAsync(int quizId, string userId, List<CreateQuestionDto> newQuestions)
         {
-            if (!await _context.Quizzes.AnyAsync(q =>
-                    q.Id == quizId && q.CreatedByUserId == userId && q.Status == QuizStatus.Draft))
-                throw new InvalidOperationException("Quiz not found or not editable.");
+            var quiz = await _context.Quizzes
+                .Where(q => q.Id == quizId && q.CreatedByUserId == userId && q.Status == QuizStatus.Draft)
+                .FirstOrDefaultAsync();
 
-            var order = await _context.Questions.MaxAsync(q => q.DisplayOrder);
+            ArgumentNullException.ThrowIfNull(quiz);
 
             foreach (var question in newQuestions)
             {
+                if (string.IsNullOrWhiteSpace(question.Text))
+                {
+                    throw new InvalidOperationException("Question text cannot be empty.");
+                }
+                // Filter out any blank options
+                var validOptions = question.Options.Where(o => !string.IsNullOrWhiteSpace(o.Text)).ToList();
+                // Validate based on question type
+                if (question.QuestionType == QuestionType.MultipleChoice)
+                {
+                    if (validOptions.Count < 2)
+                        throw new InvalidOperationException("Multiple Choice questions require at least two valid options.");
+                    // Validation for exactly one correct is handled by the radio button in UI
+                    // But we still check server-side
+                    var correctCount = validOptions.Count(o => o.IsCorrect);
+                    if (correctCount != 1)
+                        throw new InvalidOperationException("Multiple Choice questions must have exactly ONE correct answer.");
+                }
+                else if (question.QuestionType == QuestionType.ShortAnswer)
+                {
+                    if (!validOptions.Any())
+                        throw new InvalidOperationException("Short Answer questions require at least one acceptable answer.");
+                }
+                else if (question.QuestionType == QuestionType.TrueFalse)
+                {
+                    var correctCount = validOptions.Count(o => o.IsCorrect);
+                    if (correctCount != 1)
+                        throw new InvalidOperationException("True/False questions must have exactly one correct answer.");
+                }
+
+                var order = await _context.Questions.CountAsync(q => q.QuizId == quizId);
+
                 var newQuestion = new Question
                 {
                     QuizId = quizId,
@@ -99,13 +130,15 @@ namespace QuizApp.Application.Services
                     QuestionType = question.QuestionType,
                     DisplayOrder = order++,
                     Points = question.Points,
-                    Options = question.Options.Select(o => new AnswerOption
+                    Options = validOptions.Select(o => new AnswerOption
                     {
-                        Text = o.Text,
-                        IsCorrect = o.IsCorrect   
+                        Text = o.Text.Trim(),
+                        // Force possible inputted short answers as Correct answer
+                        IsCorrect = question.QuestionType == QuestionType.ShortAnswer ? true : o.IsCorrect
                     }).ToList()
                 };
-                _context.Questions.Add(newQuestion); 
+
+                _context.Questions.Add(newQuestion);
             }
 
             await _context.SaveChangesAsync();
@@ -117,8 +150,8 @@ namespace QuizApp.Application.Services
             var question = await _context.Questions
                 .Where(q => q.Id == questionId && q.QuizId == quizId
                          && q.Quiz.CreatedByUserId == userId
-                         && q.Quiz.Status == QuizStatus.Draft) 
-                .FirstOrDefaultAsync();                         
+                         && q.Quiz.Status == QuizStatus.Draft)
+                .FirstOrDefaultAsync();
 
             if (question is null)
                 throw new InvalidOperationException("Question not found or not editable.");
@@ -127,14 +160,14 @@ namespace QuizApp.Application.Services
             question.DeletedAt = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();
-            return quizId;                                    
+            return quizId;
         }
 
         public async Task RemoveQuizAsync(int quizId, string userId)
         {
             var quiz = await _context.Quizzes
                 .Where(q => q.Id == quizId && q.CreatedByUserId == userId)
-                .FirstOrDefaultAsync();                                   
+                .FirstOrDefaultAsync();
 
             if (quiz is null)
                 throw new InvalidOperationException("Quiz not found or not yours.");
