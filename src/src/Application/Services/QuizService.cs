@@ -82,7 +82,7 @@ namespace QuizApp.Application.Services
             // find() make the query execute on the client side, which can lead to performance issues and unexpected behavior when working with related entities.
         }
 
-        public async Task<int> AddQuestionsAsync(int quizId, string userId, List<CreateQuestionDto> newQuestions)
+        public async Task AddQuestionAsync(int quizId, string userId, CreateQuestionDto newQuestion)
         {
             var quiz = await _context.Quizzes
                 .Where(q => q.Id == quizId && q.CreatedByUserId == userId && q.Status == QuizStatus.Draft)
@@ -90,59 +90,50 @@ namespace QuizApp.Application.Services
 
             ArgumentNullException.ThrowIfNull(quiz);
 
-            foreach (var question in newQuestions)
+            // 1. Validate Question Text
+            if (string.IsNullOrWhiteSpace(newQuestion.Text))
+                throw new InvalidOperationException("Question text cannot be empty.");
+
+            // 2. Filter out blank options
+            var validOptions = newQuestion.Options.Where(o => !string.IsNullOrWhiteSpace(o.Text)).ToList();
+
+            // 3. Validate based on type
+            if (newQuestion.QuestionType == QuestionType.MultipleChoice)
             {
-                if (string.IsNullOrWhiteSpace(question.Text))
-                {
-                    throw new InvalidOperationException("Question text cannot be empty.");
-                }
-                // Filter out any blank options
-                var validOptions = question.Options.Where(o => !string.IsNullOrWhiteSpace(o.Text)).ToList();
-                // Validate based on question type
-                if (question.QuestionType == QuestionType.MultipleChoice)
-                {
-                    if (validOptions.Count < 2)
-                        throw new InvalidOperationException("Multiple Choice questions require at least two valid options.");
-                    // Validation for exactly one correct is handled by the radio button in UI
-                    // But we still check server-side
-                    var correctCount = validOptions.Count(o => o.IsCorrect);
-                    if (correctCount != 1)
-                        throw new InvalidOperationException("Multiple Choice questions must have exactly ONE correct answer.");
-                }
-                else if (question.QuestionType == QuestionType.ShortAnswer)
-                {
-                    if (!validOptions.Any())
-                        throw new InvalidOperationException("Short Answer questions require at least one acceptable answer.");
-                }
-                else if (question.QuestionType == QuestionType.TrueFalse)
-                {
-                    var correctCount = validOptions.Count(o => o.IsCorrect);
-                    if (correctCount != 1)
-                        throw new InvalidOperationException("True/False questions must have exactly one correct answer.");
-                }
-
-                var order = await _context.Questions.CountAsync(q => q.QuizId == quizId);
-
-                var newQuestion = new Question
-                {
-                    QuizId = quizId,
-                    Text = question.Text,
-                    QuestionType = question.QuestionType,
-                    DisplayOrder = order++,
-                    Points = question.Points,
-                    Options = validOptions.Select(o => new AnswerOption
-                    {
-                        Text = o.Text.Trim(),
-                        // Force possible inputted short answers as Correct answer
-                        IsCorrect = question.QuestionType == QuestionType.ShortAnswer ? true : o.IsCorrect
-                    }).ToList()
-                };
-
-                _context.Questions.Add(newQuestion);
+                if (validOptions.Count < 2)
+                    throw new InvalidOperationException("Multiple Choice requires at least two valid options.");
+                if (validOptions.Count(o => o.IsCorrect) != 1)
+                    throw new InvalidOperationException("Multiple Choice must have exactly ONE correct answer.");
+            }
+            else if (newQuestion.QuestionType == QuestionType.ShortAnswer)
+            {
+                if (!validOptions.Any())
+                    throw new InvalidOperationException("Short Answer requires at least one acceptable answer.");
+            }
+            else if (newQuestion.QuestionType == QuestionType.TrueFalse)
+            {
+                if (validOptions.Count(o => o.IsCorrect) != 1)
+                    throw new InvalidOperationException("True/False must have exactly one correct answer.");
             }
 
+            var order = await _context.Questions.CountAsync(q => q.QuizId == quizId);
+
+            var questionEntity = new Question
+            {
+                QuizId = quizId,
+                Text = newQuestion.Text.Trim(),
+                QuestionType = newQuestion.QuestionType,
+                DisplayOrder = order,
+                Points = newQuestion.Points,
+                Options = validOptions.Select(o => new AnswerOption
+                {
+                    Text = o.Text.Trim(),
+                    IsCorrect = newQuestion.QuestionType == QuestionType.ShortAnswer ? true : o.IsCorrect
+                }).ToList()
+            };
+
+            _context.Questions.Add(questionEntity);
             await _context.SaveChangesAsync();
-            return quizId;
         }
 
         public async Task<int> RemoveQuestionAsync(int questionId, int quizId, string userId)

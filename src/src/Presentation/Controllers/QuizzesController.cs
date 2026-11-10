@@ -110,20 +110,16 @@ namespace QuizApp.Presentation.Controllers
         [Authorize]
         public IActionResult AddQuestion(int quizId)
         {
-            var model = new List<CreateQuestionDto>
-            {
-                new CreateQuestionDto(
-                    Text: "",
-                    QuestionType: Domain.Enums.QuestionType.MultipleChoice,
-                    Points: 1,
-                    // Start with 2 options for MC, 1 for SA (handled by JS visibility)
-                    Options: new List<OptionSlotDto>
-                    {
-                        new OptionSlotDto("", false),
-                        new OptionSlotDto("", false)
-                    }
-                )
-            };
+            var model = new CreateQuestionDto(
+                Text: "",
+                QuestionType: Domain.Enums.QuestionType.MultipleChoice,
+                Points: 1,
+                Options: new List<OptionSlotDto>
+                {
+            new OptionSlotDto("", false),
+            new OptionSlotDto("", false)
+                }
+            );
             ViewBag.QuizId = quizId;
             return View(model);
         }
@@ -131,18 +127,19 @@ namespace QuizApp.Presentation.Controllers
         [HttpPost]
         [Authorize]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddQuestions(int quizId, List<CreateQuestionDto> questions)
+        public async Task<IActionResult> AddQuestion(int quizId, CreateQuestionDto question)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId is null) return Forbid();
             try
             {
-                await _quizService.AddQuestionsAsync(quizId, userId, questions);
+                await _quizService.AddQuestionAsync(quizId, userId, question);
                 return RedirectToAction(nameof(Details), new { id = quizId });
             }
-            catch (InvalidOperationException)
+            catch (InvalidOperationException ex)
             {
-                return NotFound();
+                // For now, just return a bad request with the error so you can see it
+                return BadRequest(ex.Message);
             }
         }
 

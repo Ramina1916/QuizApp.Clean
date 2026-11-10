@@ -11,7 +11,7 @@ namespace QuizApp.Application.Interfaces
         Task<List<QuizSummaryDto>> GetActiveQuizzesAsync();
         Task<QuizDetailsDto?> GetQuizDetailsAsync(int quizId, string userId);
         Task<int> CreateQuizAsync(CreateQuizDto command, string userId);
-        Task<int> AddQuestionsAsync(int quizId, string userId, List<CreateQuestionDto> newQuestions);
+        Task AddQuestionAsync(int quizId, string userId, CreateQuestionDto newQuestion);
 
         Task<int> RemoveQuestionAsync(int questionId, int quizId, string userId);
 
