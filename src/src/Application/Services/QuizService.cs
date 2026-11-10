@@ -62,6 +62,7 @@ namespace QuizApp.Application.Services
                      q.Description,
                      q.Category,
                      q.Difficulty,
+                     q.Status,
                      q.TimeLimitMinutes,
                      IsOwner: q.CreatedByUserId == userId,
                      Questions: q.Questions
