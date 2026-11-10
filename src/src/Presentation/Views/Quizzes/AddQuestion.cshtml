@@ -1,0 +1,68 @@
+﻿@model List<QuizApp.Application.DTOs.Quiz.CreateQuestionDto>
+
+@{
+    ViewData["Title"] = "Add Question";
+}
+
+<div class="page-container">
+    <h1>Add Question</h1>
+
+    <form asp-action="AddQuestions" method="post">
+        @Html.AntiForgeryToken()
+        <!-- Hidden field to pass the QuizId back to the controller -->
+        <input type="hidden" name="quizId" value="@ViewBag.QuizId" />
+
+        @* Loop through the list (currently just 1 item) *@
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <div class="question-block border p-3 mb-3">
+                <h4>Question @(i + 1)</h4>
+
+                <div class="mb-3">
+                    <label asp-for="@Model[i].Text" class="form-label">Question Text</label>
+                    <textarea asp-for="@Model[i].Text" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="@Model[i].Text" class="text-danger"></span>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label asp-for="@Model[i].QuestionType" class="form-label">Type</label>
+                        <select asp-for="@Model[i].QuestionType" class="form-select"
+                                asp-items="Html.GetEnumSelectList<QuizApp.Domain.Enums.QuestionType>()">
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="@Model[i].Points" class="form-label">Points</label>
+                        <input asp-for="@Model[i].Points" type="number" class="form-control" />
+                    </div>
+                </div>
+
+                <h5>Options</h5>
+                @* Nested loop for options *@
+                @for (int j = 0; j < Model[i].Options.Count; j++)
+                {
+                    <div class="row mb-2 align-items-center">
+                        <div class="col-md-1">
+                            <div class="form-check">
+                                <input asp-for="@Model[i].Options[j].IsCorrect" class="form-check-input" type="checkbox" />
+                                <label class="form-check-label" for="@Html.IdFor(m => m[i].Options[j].IsCorrect)">Correct?</label>
+                            </div>
+                        </div>
+                        <div class="col-md-11">
+                            <input asp-for="@Model[i].Options[j].Text" class="form-control" placeholder="Option text" />
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+
+        <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary">Save Question</button>
+            <a asp-action="Details" asp-route-id="@ViewBag.QuizId" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

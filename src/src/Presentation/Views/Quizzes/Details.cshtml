@@ -44,10 +44,21 @@
     <!-- Only show this button if the logged-in user created the quiz -->
     @if (Model.IsOwner)
     {
-        <a asp-action="AddQuestion" asp-route-quizId="@Model.Id" class="btn btn-secondary">
-            + Add Question
-        </a>
+        @* Only show Add Question if it's still a Draft *@
+        @if (Model.Status == QuizApp.Domain.Enums.QuizStatus.Draft)
+        {
+            <a asp-action="AddQuestion" asp-route-quizId="@Model.Id" class="btn btn-secondary">
+                + Add Question
+            </a>
 
-        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit Details</a>
+            <form asp-action="Publish" asp-route-id="@Model.Id" method="post" class="d-inline">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-success">Publish Quiz</button>
+            </form>
+        }
+        else
+        {
+            <span class="badge bg-success">Published</span>
+        }
     }
 </div>

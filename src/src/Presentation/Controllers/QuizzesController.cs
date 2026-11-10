@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using QuizApp.Application.DTOs.Attempt;
 using QuizApp.Application.DTOs.Quiz;
 using QuizApp.Application.Interfaces;
@@ -69,7 +70,7 @@ namespace QuizApp.Presentation.Controllers
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId is null) return Forbid();
             var dto = await _quizAttemptService.GetResultAsync(id, userId);
-            if (dto is null) return NotFound();  
+            if (dto is null) return NotFound();
             return View(dto);
         }
 
@@ -80,7 +81,7 @@ namespace QuizApp.Presentation.Controllers
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId is null) return Forbid();
             var dtos = await _quizAttemptService.GetHistoryAsync(userId);
-            return View(dtos);   
+            return View(dtos);
         }
 
         [HttpGet]
@@ -95,14 +96,107 @@ namespace QuizApp.Presentation.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(CreateQuizDto model)
         {
-            if (!ModelState.IsValid) return View(model); 
+            if (!ModelState.IsValid) return View(model);
 
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId is null) return Forbid();
 
             var newQuizId = await _quizService.CreateQuizAsync(model, userId);
 
-            return RedirectToAction(nameof(Details), new { id = newQuizId});
+            return RedirectToAction(nameof(Details), new { id = newQuizId });
+        }
+
+        [HttpGet]
+        [Authorize]
+        public IActionResult AddQuestion(int quizId)
+        {
+            // Initialize with one empty question and 2 empty options (standard for MCQ)
+            var model = new List<CreateQuestionDto>
+            {
+                new CreateQuestionDto(
+                    Text: "",
+                    QuestionType: Domain.Enums.QuestionType.MultipleChoice,
+                    Points: 1,
+                    Options: new List<OptionSlotDto>
+                    {
+                        new OptionSlotDto("", false),
+                        new OptionSlotDto("", false)
+                    }
+                )
+            };
+            ViewBag.QuizId = quizId; // Pass ID to the view for the form action
+            return View(model);
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddQuestions(int quizId, List<CreateQuestionDto> questions)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId is null) return Forbid();
+            try
+            {
+                await _quizService.AddQuestionsAsync(quizId, userId, questions);
+                return RedirectToAction(nameof(Details), new { id = quizId });
+            }
+            catch (InvalidOperationException)
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RemoveQuestion(int questionId, int quizId)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId is null) return Forbid();
+            try
+            {
+                await _quizService.RemoveQuestionAsync(questionId, quizId, userId);
+                return RedirectToAction(nameof(Details), new { id = quizId });
+            }
+            catch (InvalidOperationException)
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RemoveQuiz(int quizId)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId is null) return Forbid();
+            try
+            {
+                await _quizService.RemoveQuizAsync(quizId, userId);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (InvalidOperationException)
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Publish(int id)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            try
+            {
+                await _quizService.PublishAsync(id, userId);
+                return RedirectToAction(nameof(Details), new { id }); // Stay on the page to see the change
+            }
+            catch (InvalidOperationException)
+            {
+                return NotFound();
+            }
         }
     }
 }

@@ -16,5 +16,7 @@ namespace QuizApp.Application.Interfaces
         Task<int> RemoveQuestionAsync(int questionId, int quizId, string userId);
 
         Task RemoveQuizAsync(int quizId, string userId);
+
+        Task PublishAsync(int quizId, string userId);
     }
 }

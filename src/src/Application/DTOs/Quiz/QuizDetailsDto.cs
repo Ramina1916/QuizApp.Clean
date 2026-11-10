@@ -9,6 +9,7 @@ namespace QuizApp.Application.DTOs.Quiz
         string? Description,
         string Category,
         DifficultyLevel Difficulty,
+        QuizStatus Status,
         int TimeLimitMinutes,
         bool IsOwner,
         List<QuestionDto> Questions

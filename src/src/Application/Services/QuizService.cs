@@ -87,7 +87,7 @@ namespace QuizApp.Application.Services
                     q.Id == quizId && q.CreatedByUserId == userId && q.Status == QuizStatus.Draft))
                 throw new InvalidOperationException("Quiz not found or not editable.");
 
-            var order = await _context.Questions.CountAsync(q => q.QuizId == quizId);
+            var order = await _context.Questions.MaxAsync(q => q.DisplayOrder);
 
             foreach (var question in newQuestions)
             {
@@ -116,7 +116,7 @@ namespace QuizApp.Application.Services
             var question = await _context.Questions
                 .Where(q => q.Id == questionId && q.QuizId == quizId
                          && q.Quiz.CreatedByUserId == userId
-                         && q.Quiz.Status == QuizStatus.Draft)  
+                         && q.Quiz.Status == QuizStatus.Draft) 
                 .FirstOrDefaultAsync();                         
 
             if (question is null)
@@ -141,6 +141,19 @@ namespace QuizApp.Application.Services
             quiz.IsDeleted = true;
             quiz.DeletedAt = DateTime.UtcNow;
 
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task PublishAsync(int quizId, string userId)
+        {
+            var quiz = await _context.Quizzes
+                .Where(q => q.Id == quizId && q.CreatedByUserId == userId && q.Status == QuizStatus.Draft)
+                .FirstOrDefaultAsync();
+
+            if (quiz is null)
+                throw new InvalidOperationException("Quiz not found, not yours, or already published.");
+
+            quiz.Status = QuizStatus.Active;
             await _context.SaveChangesAsync();
         }
     }

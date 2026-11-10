@@ -1,9 +1,4 @@
-﻿using QuizApp.Application.DTOs.Commands;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace QuizApp.Application.DTOs.Attempt
+﻿namespace QuizApp.Application.DTOs.Attempt
 {
     // represents the data required to take a quiz, including the quiz ID, title, time limit, and the list of submitted answers
     public record TakeQuizDto(
