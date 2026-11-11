@@ -120,7 +120,9 @@ namespace QuizApp.Presentation.Controllers
             new OptionSlotDto("", false)
                 }
             );
+
             ViewBag.QuizId = quizId;
+
             return View(model);
         }
 
@@ -130,7 +132,15 @@ namespace QuizApp.Presentation.Controllers
         public async Task<IActionResult> AddQuestion(int quizId, CreateQuestionDto question)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (userId is null) return Forbid();
+
+            if (userId is null)
+                return Forbid();
+
+            ViewBag.QuizId = quizId;
+
+            if (!ModelState.IsValid)
+                return View(question);
+
             try
             {
                 await _quizService.AddQuestionAsync(quizId, userId, question);
@@ -138,8 +148,10 @@ namespace QuizApp.Presentation.Controllers
             }
             catch (InvalidOperationException ex)
             {
-                // For now, just return a bad request with the error so you can see it
-                return BadRequest(ex.Message);
+                // Display a safe validation message.
+                ModelState.AddModelError(string.Empty, ex.Message);
+
+                return View(question);
             }
         }
 

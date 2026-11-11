@@ -82,59 +82,149 @@ namespace QuizApp.Application.Services
             // find() make the query execute on the client side, which can lead to performance issues and unexpected behavior when working with related entities.
         }
 
-        public async Task AddQuestionAsync(int quizId, string userId, CreateQuestionDto newQuestion)
+        public async Task AddQuestionAsync(int quizId,string userId,CreateQuestionDto newQuestion)
         {
+            ArgumentNullException.ThrowIfNull(newQuestion);
+
             var quiz = await _context.Quizzes
-                .Where(q => q.Id == quizId && q.CreatedByUserId == userId && q.Status == QuizStatus.Draft)
-                .FirstOrDefaultAsync();
+                .FirstOrDefaultAsync(q =>
+                    q.Id == quizId &&
+                    q.CreatedByUserId == userId &&
+                    q.Status == QuizStatus.Draft);
 
-            ArgumentNullException.ThrowIfNull(quiz);
+            if (quiz is null)
+            {
+                throw new InvalidOperationException(
+                    "The quiz was not found or is not editable.");
+            }
 
-            // 1. Validate Question Text
+
             if (string.IsNullOrWhiteSpace(newQuestion.Text))
-                throw new InvalidOperationException("Question text cannot be empty.");
-
-            // 2. Filter out blank options
-            var validOptions = newQuestion.Options.Where(o => !string.IsNullOrWhiteSpace(o.Text)).ToList();
-
-            // 3. Validate based on type
-            if (newQuestion.QuestionType == QuestionType.MultipleChoice)
             {
-                if (validOptions.Count < 2)
-                    throw new InvalidOperationException("Multiple Choice requires at least two valid options.");
-                if (validOptions.Count(o => o.IsCorrect) != 1)
-                    throw new InvalidOperationException("Multiple Choice must have exactly ONE correct answer.");
-            }
-            else if (newQuestion.QuestionType == QuestionType.ShortAnswer)
-            {
-                if (!validOptions.Any())
-                    throw new InvalidOperationException("Short Answer requires at least one acceptable answer.");
-            }
-            else if (newQuestion.QuestionType == QuestionType.TrueFalse)
-            {
-                if (validOptions.Count(o => o.IsCorrect) != 1)
-                    throw new InvalidOperationException("True/False must have exactly one correct answer.");
+                throw new InvalidOperationException(
+                    "Question text cannot be empty.");
             }
 
-            var order = await _context.Questions.CountAsync(q => q.QuizId == quizId);
+
+            if (newQuestion.Points < 1)
+            {
+                throw new InvalidOperationException(
+                    "Question points must be greater than zero.");
+            }
+
+
+            if (!Enum.IsDefined(typeof(QuestionType), newQuestion.QuestionType))
+            {
+                throw new InvalidOperationException(
+                    "Invalid question type.");
+            }
+
+
+            var validOptions = (newQuestion.Options ?? new List<OptionSlotDto>())
+                .Where(o => o != null &&
+                            !string.IsNullOrWhiteSpace(o.Text))
+                .ToList();
+
+
+            switch (newQuestion.QuestionType)
+            {
+                case QuestionType.MultipleChoice:
+
+                    if (validOptions.Count < 2)
+                    {
+                        throw new InvalidOperationException(
+                            "Multiple Choice requires at least two valid options.");
+                    }
+
+                    if (validOptions.Count(o => o.IsCorrect) != 1)
+                    {
+                        throw new InvalidOperationException(
+                            "Multiple Choice must have exactly one correct answer.");
+                    }
+
+                    break;
+                case QuestionType.ShortAnswer:
+
+                    if (!validOptions.Any())
+                    {
+                        throw new InvalidOperationException(
+                            "Short Answer requires at least one acceptable answer.");
+                    }
+
+                    break;
+
+                case QuestionType.TrueFalse:
+
+                    if (validOptions.Count != 2)
+                    {
+                        throw new InvalidOperationException(
+                            "True/False must contain exactly two options.");
+                    }
+
+                    var hasTrue = validOptions.Any(
+                        o => string.Equals(
+                            o.Text.Trim(),
+                            "True",
+                            StringComparison.OrdinalIgnoreCase));
+
+                    var hasFalse = validOptions.Any(
+                        o => string.Equals(
+                            o.Text.Trim(),
+                            "False",
+                            StringComparison.OrdinalIgnoreCase));
+
+                    if (!hasTrue || !hasFalse)
+                    {
+                        throw new InvalidOperationException(
+                            "True/False must contain True and False options.");
+                    }
+
+                    if (validOptions.Count(o => o.IsCorrect) != 1)
+                    {
+                        throw new InvalidOperationException(
+                            "True/False must have exactly one correct answer.");
+                    }
+
+                    break;
+                default:
+
+                    throw new InvalidOperationException(
+                        "Unsupported question type.");
+            }
+
+
+            var order = await _context.Questions
+                .CountAsync(q => q.QuizId == quizId);
+
 
             var questionEntity = new Question
             {
                 QuizId = quizId,
+
                 Text = newQuestion.Text.Trim(),
+
                 QuestionType = newQuestion.QuestionType,
+
                 DisplayOrder = order,
+
                 Points = newQuestion.Points,
+
                 Options = validOptions.Select(o => new AnswerOption
                 {
                     Text = o.Text.Trim(),
-                    IsCorrect = newQuestion.QuestionType == QuestionType.ShortAnswer ? true : o.IsCorrect
+
+                    IsCorrect =
+                        newQuestion.QuestionType == QuestionType.ShortAnswer
+                            ? true
+                            : o.IsCorrect
+
                 }).ToList()
             };
 
+
             _context.Questions.Add(questionEntity);
             await _context.SaveChangesAsync();
-        }
+        } 
 
         public async Task<int> RemoveQuestionAsync(int questionId, int quizId, string userId)
         {
