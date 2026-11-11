@@ -6,8 +6,8 @@ namespace QuizApp.Application.DTOs.Quiz // Command DTOs are used to encapsulate 
     //  We use validation attribute because 
     public record CreateQuizDto(
     [Required] string Title,
-    string? Description,                                  // nullable = optional, no [Required]
+    string? Description,                                  
     [Required] string Category,
-    DifficultyLevel Difficulty,                           // enum, no attribute needed
+    DifficultyLevel Difficulty,                        
     [Range(1, 120)] int TimeLimitMinutes);
 }
