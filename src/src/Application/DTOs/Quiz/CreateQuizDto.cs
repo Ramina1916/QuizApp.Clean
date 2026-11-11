@@ -8,6 +8,6 @@ namespace QuizApp.Application.DTOs.Quiz // Command DTOs are used to encapsulate 
     [Required] string Title,
     string? Description,                                  
     [Required] string Category,
-    DifficultyLevel Difficulty,                        
+    [EnumDataType(typeof(DifficultyLevel))] DifficultyLevel Difficulty,                        
     [Range(1, 120)] int TimeLimitMinutes);
 }

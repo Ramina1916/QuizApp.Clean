@@ -18,5 +18,9 @@ namespace QuizApp.Application.Interfaces
         Task RemoveQuizAsync(int quizId, string userId);
 
         Task PublishAsync(int quizId, string userId);
+
+        Task<EditQuizDto?> GetQuizForEditAsync(int quizId, string userId); 
+
+        Task UpdateQuizAsync(int quizId, string userId, EditQuizDto dto);
     }
 }

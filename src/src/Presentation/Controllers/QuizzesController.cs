@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using QuizApp.Application.DTOs.Attempt;
 using QuizApp.Application.DTOs.Quiz;
 using QuizApp.Application.Interfaces;
+using QuizApp.Domain.Entities;
 using System.Security.Claims;
 
 namespace QuizApp.Presentation.Controllers
@@ -202,6 +203,50 @@ namespace QuizApp.Presentation.Controllers
             {
                 await _quizService.PublishAsync(id, userId);
                 return RedirectToAction(nameof(Details), new { id }); // Stay on the page to see the change
+            }
+            catch (InvalidOperationException)
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (userId is null)
+                return Forbid();
+
+            var dto = await _quizService.GetQuizForEditAsync(id, userId);
+
+            if (dto is null)
+                return NotFound();
+
+            return View(dto);
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, EditQuizDto dto)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (userId is null)
+                return Forbid();
+
+            if (!ModelState.IsValid)
+                return View(dto with { Id = id });
+
+            try
+            {
+                await _quizService.UpdateQuizAsync(id, userId, dto);
+
+                TempData["SuccessMessage"] = "Quiz updated successfully.";
+
+                return RedirectToAction(nameof(Details), new { id });
             }
             catch (InvalidOperationException)
             {

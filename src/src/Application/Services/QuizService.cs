@@ -271,5 +271,52 @@ namespace QuizApp.Application.Services
             quiz.Status = QuizStatus.Active;
             await _context.SaveChangesAsync();
         }
+
+        public async Task<EditQuizDto?> GetQuizForEditAsync(int quizId, string userId)
+        {
+            var quiz = await _context.Quizzes
+                .FirstOrDefaultAsync(q =>
+                    q.Id == quizId &&
+                    q.CreatedByUserId == userId &&
+                    q.Status == QuizStatus.Draft);
+
+            if (quiz is null)
+                return null;
+
+            return new EditQuizDto(
+                Id: quiz.Id,
+                Title: quiz.Title,
+                Description: quiz.Description,
+                Category: quiz.Category,
+                Difficulty: quiz.Difficulty,
+                TimeLimitMinutes: quiz.TimeLimitMinutes
+            );
+        }
+
+        public async Task UpdateQuizAsync(int quizId, string userId, EditQuizDto dto)
+        {
+            ArgumentNullException.ThrowIfNull(dto);
+
+            var quiz = await _context.Quizzes
+                .FirstOrDefaultAsync(q =>
+                    q.Id == quizId &&
+                    q.CreatedByUserId == userId &&
+                    q.Status == QuizStatus.Draft);
+
+            if (quiz is null)
+                throw new InvalidOperationException(
+                    "Quiz not found or you are not authorised to edit it.");
+
+            quiz.Title = dto.Title.Trim();
+            quiz.Description = string.IsNullOrWhiteSpace(dto.Description)
+                ? null
+                : dto.Description.Trim();
+
+            quiz.Category = dto.Category.Trim();
+            quiz.Difficulty = dto.Difficulty;
+            quiz.TimeLimitMinutes = dto.TimeLimitMinutes;
+
+            await _context.SaveChangesAsync();
+        }
     }
 }
