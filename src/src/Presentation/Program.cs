@@ -3,17 +3,23 @@ using Microsoft.AspNetCore.Identity;
 using QuizApp.Application.Interfaces;
 using QuizApp.Application.Services;
 using QuizApp.Infrastructure.Persistence;
-using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
-using Microsoft.Extensions.Options;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddFluentValidationAutoValidation();
+
 builder.Services.AddDbContext<IApplicationDbContext, ApplicationDbContext>(
     options => options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection"))); // get the directory from appsettings.json
+
+// Registe Validators in the Application assembly
+builder.Services.AddValidatorsFromAssemblyContaining<QuizApp.Application.Validators.CreateQuestionDtoValidator>();
+
 
 builder.Services.AddScoped<IQuizService, QuizService>();
 builder.Services.AddScoped<IQuizAttemptService, QuizAttemptService>();
@@ -36,7 +42,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 
-app.UseAuthentication();   // ← make sure these two are present, in this order
+app.UseAuthentication();  
 app.UseAuthorization();
 
 app.UseHttpsRedirection();

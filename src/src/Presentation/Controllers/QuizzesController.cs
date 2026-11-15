@@ -233,7 +233,6 @@ namespace QuizApp.Presentation.Controllers
         public async Task<IActionResult> Edit(int id, EditQuizDto dto)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
             if (userId is null)
                 return Forbid();
 

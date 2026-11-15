@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "+bGnEZKUIgw=",
+  "dgSpecHash": "BRTmDMO3obQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Presentation\\QuizApp.Presentation.csproj",
   "expectedPackageFiles": [
     "D:\\NuGetPackages\\azure.core\\1.50.0\\azure.core.1.50.0.nupkg.sha512",
     "D:\\NuGetPackages\\azure.identity\\1.17.1\\azure.identity.1.17.1.nupkg.sha512",
     "D:\\NuGetPackages\\fluentvalidation\\12.2.0\\fluentvalidation.12.2.0.nupkg.sha512",
+    "D:\\NuGetPackages\\fluentvalidation.aspnetcore\\11.3.1\\fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
     "D:\\NuGetPackages\\fluentvalidation.dependencyinjectionextensions\\12.2.0\\fluentvalidation.dependencyinjectionextensions.12.2.0.nupkg.sha512",
     "D:\\NuGetPackages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "D:\\NuGetPackages\\microsoft.aspnetcore.identity.entityframeworkcore\\10.0.14\\microsoft.aspnetcore.identity.entityframeworkcore.10.0.14.nupkg.sha512",
