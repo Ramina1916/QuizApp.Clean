@@ -8,7 +8,7 @@ namespace QuizApp.Infrastructure.Persistence.EntityConfiguration
 {
     public class QuizConfiguration : IEntityTypeConfiguration<Quiz> // inherits from IEntityTypeConfiguration<Quiz> to provide configuration for the Quiz entity.
     {
-        public void Configure(EntityTypeBuilder<Quiz> builder) 
+        public void Configure(EntityTypeBuilder<Quiz> builder)
         {
             builder.ToTable("Quizzes"); // Configures the table name for the Quiz entity in the database.
 
@@ -28,6 +28,7 @@ namespace QuizApp.Infrastructure.Persistence.EntityConfiguration
             // Enums stored as integers in the database, so we need to configure the conversion for Difficulty and Status properties.
             builder.Property(q => q.Difficulty)
                 .HasConversion<int>();
+
             builder.Property(q => q.Status)
                 .HasConversion<int>();
 
