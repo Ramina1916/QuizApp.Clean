@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hBLvl0IgoWc=",
+  "dgSpecHash": "QHvSQf3NrnM=",
   "success": true,
   "projectFilePath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Infrastructure\\QuizApp.Infrastructure.csproj",
   "expectedPackageFiles": [
     "D:\\NuGetPackages\\azure.core\\1.50.0\\azure.core.1.50.0.nupkg.sha512",
     "D:\\NuGetPackages\\azure.identity\\1.17.1\\azure.identity.1.17.1.nupkg.sha512",
+    "D:\\NuGetPackages\\fluentvalidation\\12.2.0\\fluentvalidation.12.2.0.nupkg.sha512",
     "D:\\NuGetPackages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "D:\\NuGetPackages\\microsoft.aspnetcore.cryptography.internal\\10.0.14\\microsoft.aspnetcore.cryptography.internal.10.0.14.nupkg.sha512",
     "D:\\NuGetPackages\\microsoft.aspnetcore.cryptography.keyderivation\\10.0.14\\microsoft.aspnetcore.cryptography.keyderivation.10.0.14.nupkg.sha512",

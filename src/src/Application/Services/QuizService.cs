@@ -99,98 +99,9 @@ namespace QuizApp.Application.Services
             }
 
 
-            if (string.IsNullOrWhiteSpace(newQuestion.Text))
-            {
-                throw new InvalidOperationException(
-                    "Question text cannot be empty.");
-            }
-
-
-            if (newQuestion.Points < 1)
-            {
-                throw new InvalidOperationException(
-                    "Question points must be greater than zero.");
-            }
-
-
-            if (!Enum.IsDefined(typeof(QuestionType), newQuestion.QuestionType))
-            {
-                throw new InvalidOperationException(
-                    "Invalid question type.");
-            }
-
-
             var validOptions = (newQuestion.Options ?? new List<OptionSlotDto>())
-                .Where(o => o != null &&
-                            !string.IsNullOrWhiteSpace(o.Text))
+                .Where(o => o != null && !string.IsNullOrWhiteSpace(o.Text))
                 .ToList();
-
-
-            switch (newQuestion.QuestionType)
-            {
-                case QuestionType.MultipleChoice:
-
-                    if (validOptions.Count < 2)
-                    {
-                        throw new InvalidOperationException(
-                            "Multiple Choice requires at least two valid options.");
-                    }
-
-                    if (validOptions.Count(o => o.IsCorrect) != 1)
-                    {
-                        throw new InvalidOperationException(
-                            "Multiple Choice must have exactly one correct answer.");
-                    }
-
-                    break;
-                case QuestionType.ShortAnswer:
-
-                    if (!validOptions.Any())
-                    {
-                        throw new InvalidOperationException(
-                            "Short Answer requires at least one acceptable answer.");
-                    }
-
-                    break;
-
-                case QuestionType.TrueFalse:
-
-                    if (validOptions.Count != 2)
-                    {
-                        throw new InvalidOperationException(
-                            "True/False must contain exactly two options.");
-                    }
-
-                    var hasTrue = validOptions.Any(
-                        o => string.Equals(
-                            o.Text.Trim(),
-                            "True",
-                            StringComparison.OrdinalIgnoreCase));
-
-                    var hasFalse = validOptions.Any(
-                        o => string.Equals(
-                            o.Text.Trim(),
-                            "False",
-                            StringComparison.OrdinalIgnoreCase));
-
-                    if (!hasTrue || !hasFalse)
-                    {
-                        throw new InvalidOperationException(
-                            "True/False must contain True and False options.");
-                    }
-
-                    if (validOptions.Count(o => o.IsCorrect) != 1)
-                    {
-                        throw new InvalidOperationException(
-                            "True/False must have exactly one correct answer.");
-                    }
-
-                    break;
-                default:
-
-                    throw new InvalidOperationException(
-                        "Unsupported question type.");
-            }
 
 
             var order = await _context.Questions
@@ -200,24 +111,14 @@ namespace QuizApp.Application.Services
             var questionEntity = new Question
             {
                 QuizId = quizId,
-
                 Text = newQuestion.Text.Trim(),
-
                 QuestionType = newQuestion.QuestionType,
-
                 DisplayOrder = order,
-
                 Points = newQuestion.Points,
-
                 Options = validOptions.Select(o => new AnswerOption
                 {
                     Text = o.Text.Trim(),
-
-                    IsCorrect =
-                        newQuestion.QuestionType == QuestionType.ShortAnswer
-                            ? true
-                            : o.IsCorrect
-
+                    IsCorrect = newQuestion.QuestionType == QuestionType.ShortAnswer? true: o.IsCorrect
                 }).ToList()
             };
 
