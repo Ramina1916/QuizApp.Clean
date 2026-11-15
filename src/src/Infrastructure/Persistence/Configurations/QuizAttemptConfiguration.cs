@@ -12,7 +12,8 @@ namespace QuizApp.Infrastructure.Persistence.Configurations
 
             builder.ToTable("QuizAttempts");
 
-            builder.HasQueryFilter(a => !a.Quiz.IsDeleted);
+            builder.Navigation(a => a.Quiz)
+                .IsRequired(false);
 
             builder.HasKey(a => a.Id);
 
