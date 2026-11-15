@@ -12,8 +12,9 @@ namespace QuizApp.Infrastructure.Persistence.Configurations
 
             builder.ToTable("QuizAttempts");
 
-            builder.HasKey(a => a.Id);
+            builder.HasQueryFilter(a => !a.Quiz.IsDeleted);
 
+            builder.HasKey(a => a.Id);
 
             // Configures the relationship between QuizAttempt and Quiz entities, with cascade delete behavior.
             builder.HasOne(a => a.Quiz)

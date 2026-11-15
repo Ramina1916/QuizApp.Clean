@@ -9,6 +9,8 @@ namespace QuizApp.Infrastructure.Persistence.Configurations
         {
             builder.ToTable("AnswerOptions");
 
+            builder.HasQueryFilter(opt => !opt.Question.IsDeleted);
+
             builder.HasKey(ao => ao.Id);
 
             builder.Property(ao => ao.Text)

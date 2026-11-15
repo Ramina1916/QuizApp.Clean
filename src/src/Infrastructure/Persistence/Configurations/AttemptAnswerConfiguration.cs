@@ -10,7 +10,10 @@ namespace QuizApp.Infrastructure.Persistence.Configurations
         {
             builder.ToTable("AttemptAnswers");
 
+            builder.HasQueryFilter(a => !a.Attempt.Quiz.IsDeleted);
+
             builder.HasKey(aa => aa.Id);
+
 
             builder.Property(aa => aa.QuestionTextSnapshot)
                 .IsRequired()

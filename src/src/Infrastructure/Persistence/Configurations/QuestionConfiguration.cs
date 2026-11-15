@@ -14,6 +14,8 @@ namespace QuizApp.Infrastructure.Persistence.Configurations
         {
             builder.ToTable("Questions");
 
+            builder.HasQueryFilter(qq => !qq.IsDeleted);
+
             builder.HasKey(qq => qq.Id);
 
             builder.Property(qq => qq.Text)
@@ -23,9 +25,6 @@ namespace QuizApp.Infrastructure.Persistence.Configurations
             // Convert the enum to int 
             builder.Property(qq => qq.QuestionType)
                 .HasConversion<int>();
-
-            builder.HasQueryFilter(qq => !qq.IsDeleted);
-
 
             // Configures the one-to-many relationship between Question and AnswerOption entities, with cascade delete behavior.
             builder.HasMany(qq => qq.Options)
