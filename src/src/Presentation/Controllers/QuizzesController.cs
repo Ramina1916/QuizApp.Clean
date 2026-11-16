@@ -243,7 +243,6 @@ public class QuizzesController : Controller
         try
         {
             await _quizService.UpdateQuizAsync(id, userId, dto);
-
             TempData["SuccessMessage"] = "Quiz updated successfully.";
             return RedirectToAction(nameof(Details), new { id });
         }

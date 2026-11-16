@@ -149,7 +149,7 @@ namespace QuizApp.Application.Services
                     QuizTitle: a.Quiz.Title,
                     Score: a.Score,
                     MaxScore: a.MaxScore,
-                    CompletedAt: a.CompletedAt.Value,
+                    CompletedAt: a.CompletedAt,
                     Answers: a.Answers
                      .Select(answers => new GradedAnswerDto(
                          QuestionId: answers.QuestionId,
@@ -166,13 +166,14 @@ namespace QuizApp.Application.Services
         {
             return await _context.QuizAttempts
                 .Where(a => a.UserId == userId && a.CompletedAt != null)
+                .OrderByDescending(a => a.CompletedAt)
                 .Select(a => new AttemptSummaryDto(
                     AttemptId: a.Id,
                     QuizTitle: a.Quiz.Title,
                     Score: a.Score,
                     MaxScore: a.MaxScore,
-                    CompletedAt: a.CompletedAt.Value
-                )).OrderByDescending(a => a.CompletedAt)
+                    CompletedAt: a.CompletedAt
+                ))
                 .ToListAsync();
         }
     }

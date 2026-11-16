@@ -9,7 +9,7 @@
     <!-- Score Summary Card -->
     <div class="score-card" style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
         <h2>Your Score: @Model.Score / @Model.MaxScore</h2>
-        <p class="text-muted">Completed on: @Model.CompletedAt.ToString("g")</p>
+        <p class="text-muted">Completed on: @Model.CompletedAt?.ToString("g")</p>
     </div>
 
     <h3>Question Breakdown</h3>

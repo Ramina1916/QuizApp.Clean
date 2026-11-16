@@ -12,6 +12,6 @@ namespace QuizApp.Application.DTOs.Attempt
      string QuizTitle,
      int Score,
      int MaxScore,
-     DateTime CompletedAt,
+     DateTime? CompletedAt,
      List<GradedAnswerDto> Answers);
 }
