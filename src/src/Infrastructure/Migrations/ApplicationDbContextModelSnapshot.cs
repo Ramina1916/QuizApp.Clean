@@ -388,6 +388,9 @@ namespace QuizApp.Infrastructure.Migrations
                     b.Property<DateTime?>("CompletedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime>("ExpiresAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("MaxScore")
                         .HasColumnType("int");
 
@@ -517,8 +520,7 @@ namespace QuizApp.Infrastructure.Migrations
                     b.HasOne("QuizApp.Domain.Entities.Quiz", "Quiz")
                         .WithMany("Attempts")
                         .HasForeignKey("QuizId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
                         .WithMany()

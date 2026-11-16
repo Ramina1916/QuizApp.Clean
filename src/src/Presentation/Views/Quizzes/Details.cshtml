@@ -135,9 +135,12 @@
     @if (Model.Status == QuizApp.Domain.Enums.QuizStatus.Active || Model.IsOwner)
     {
         <div class="mt-4 text-center">
-            <a asp-action="Take" asp-route-id="@Model.Id" class="btn btn-lg btn-primary w-100">
-                Start Quiz
-            </a>
+            <form asp-controller="Quizzes" asp-action="Start" asp-route-quizId="@Model.Id" method="post">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-lg btn-primary w-100">
+                    Start Quiz
+                </button>
+            </form>
         </div>
     }
 </div>

@@ -14,6 +14,7 @@ namespace QuizApp.Domain.Entities
         public string UserId { get; set; } = string.Empty;
 
         public DateTime StartedAt { get; set; }
+        public DateTime ExpiresAt { get; set; }
         public DateTime? CompletedAt { get; set; }
 
         public int Score { get; set; }

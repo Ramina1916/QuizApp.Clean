@@ -40,16 +40,40 @@ namespace QuizApp.Presentation.Controllers
             return View(dto);
         }
 
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Start(int quizId)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId is null) return Forbid();
+
+            try
+            {
+                var attemptId = await _quizAttemptService.StartAttemptAsync(quizId, userId);
+                return RedirectToAction(nameof(Take), new { attemptId });
+            }
+            catch (InvalidOperationException ex)
+            {
+                TempData["ErrorMessage"] = ex.Message;
+                return RedirectToAction(nameof(Index));
+            }
+        }
+
         [HttpGet]
         [Authorize]
-        public async Task<IActionResult> Take(int id)
+        public async Task<IActionResult> Take(int attemptId)
         {
-            //
-            var dto = await _quizAttemptService.GetTakeQuizAsync(id);
-            if (dto == null)
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId is null) return Forbid();
+
+            var dto = await _quizAttemptService.GetTakeQuizAsync(attemptId, userId);
+
+            if (dto is null)
             {
-                return NotFound();
+                return NotFound(); // Or redirect to an error page
             }
+
             return View(dto);
         }
 
@@ -60,8 +84,23 @@ namespace QuizApp.Presentation.Controllers
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId is null) return Forbid();
-            var attemptId = await _quizAttemptService.SubmitAsync(model.QuizId, userId, model.Submissions);
-            return RedirectToAction("Results", new { id = attemptId });
+
+            try
+            {
+                // Pass model.AttemptId, NOT model.QuizId
+                var attemptId = await _quizAttemptService.SubmitAsync(model.AttemptId, userId, model.Submissions);
+                return RedirectToAction("Results", new { id = attemptId });
+            }
+            catch (InvalidOperationException ex)
+            {
+                if (ex.Message.Contains("Time limit exceeded"))
+                {
+                    return RedirectToAction("TimeExpired");
+                }
+
+                TempData["ErrorMessage"] = ex.Message;
+                return RedirectToAction(nameof(Index));
+            }
         }
 
         [HttpGet]
@@ -284,7 +323,7 @@ namespace QuizApp.Presentation.Controllers
             try
             {
                 await _quizService.UpdateQuestionAsync(Id, quizId, userId, dto);
-                TempData["SuccessMessage"] = "Quiestion updated successfully.";
+                TempData["SuccessMessage"] = "Question updated successfully.";
                 return RedirectToAction(nameof(Details), new { id = quizId });
             }
             catch (InvalidOperationException)

@@ -20,51 +20,72 @@ namespace QuizApp.Application.Services
             _grading = grading;
         }
 
-        public async Task<TakeQuizDto?> GetTakeQuizAsync(int quizId)
+        public async Task<TakeQuizDto?> GetTakeQuizAsync(int attemptId, string userId)
         {
-            return await _context.Quizzes
-                .Where(q => q.Status == QuizStatus.Active && q.Id == quizId)
-                .Select(q => new TakeQuizDto(
-                    QuizId: q.Id,
-                    Title: q.Title,
-                    TimeLimitMinutes: q.TimeLimitMinutes,
-                    Questions: q.Questions
-                    .OrderBy(qq => qq.DisplayOrder)
-                    .Select(qq => new TakeQuestionDto(
-                        qq.Id,
-                        qq.Text,
-                        qq.QuestionType,
-                        qq.Points,
-                        Options: qq.Options
-                        .Select(opt => new AnswerOptionDto(
-                            Id: opt.Id, Text: opt.Text
+            return await _context.QuizAttempts
+                .Where(a => a.Id == attemptId && a.UserId == userId && a.CompletedAt == null) // <-- Crucial security check
+                .Select(a => new TakeQuizDto(
+                    AttemptId: a.Id,
+                    QuizId: a.QuizId,
+                    Title: a.Quiz.Title,
+                    TimeLimitMinutes: a.Quiz.TimeLimitMinutes,
+                    Questions: a.Quiz.Questions
+                        .OrderBy(q => q.DisplayOrder)
+                        .Select(q => new TakeQuestionDto(
+                            q.Id,
+                            q.Text,
+                            q.QuestionType,
+                            q.Points,
+                            Options: q.Options.Select(opt => new AnswerOptionDto(opt.Id, opt.Text)).ToList()
                         )).ToList()
-                    )).ToList()
                 )).FirstOrDefaultAsync();
         }
 
-        public async Task<int> SubmitAsync(int quizId, string userId, List<SubmittedAnswerDto> answers)
+        public async Task<int> StartAttemptAsync(int quizId, string userId)
         {
-            var truth = await _context.Quizzes
-                .Where(q => q.Id == quizId && q.Status == QuizStatus.Active)
-                .Include(q => q.Questions) // eager loading 
-                .ThenInclude(q => q.Options)
-                .FirstOrDefaultAsync();
-            if (truth is null) throw new InvalidOperationException("Quize is no longer available.");
+            var quiz = await _context.Quizzes
+                .Include(q => q.Questions) // Need to include to calculate MaxScore
+                .FirstOrDefaultAsync(q => q.Id == quizId && q.Status == QuizStatus.Active);
 
-            var result = _grading.Grade(truth, answers);
+            if (quiz is null) throw new InvalidOperationException("Quiz not available.");
 
-            var now = DateTime.UtcNow;
+            var startedAt = DateTime.UtcNow;
 
             var attempt = new QuizAttempt
             {
-                QuizId = truth.Id,
+                QuizId = quizId,
                 UserId = userId,
-                StartedAt = now,
-                CompletedAt = now,
-                Score = result.EarnedScore,
-                MaxScore = result.MaxScore
+                StartedAt = startedAt,
+                ExpiresAt = startedAt.AddMinutes(quiz.TimeLimitMinutes), // CALCULATE DEADLINE HERE
+                MaxScore = quiz.Questions.Sum(q => q.Points)
             };
+
+            _context.QuizAttempts.Add(attempt);
+            await _context.SaveChangesAsync();
+            return attempt.Id;
+        }
+
+        public async Task<int> SubmitAsync(int attemptId, string userId, List<SubmittedAnswerDto> answers)
+        {
+            var attempt = await _context.QuizAttempts
+                .Include(a => a.Quiz)
+                    .ThenInclude(q => q.Questions)
+                        .ThenInclude(q => q.Options)
+                .FirstOrDefaultAsync(a => a.Id == attemptId && a.UserId == userId && a.CompletedAt == null);
+
+            if (attempt is null)
+                throw new InvalidOperationException("Attempt not found, already completed, or you are not authorized.");
+
+            if (DateTime.UtcNow > attempt.ExpiresAt)
+            {
+                throw new InvalidOperationException("Submission rejected: Time limit exceeded.");
+            }
+
+            var result = _grading.Grade(attempt.Quiz, answers);
+
+            attempt.CompletedAt = DateTime.UtcNow;
+
+            attempt.Score = result.EarnedScore;
 
             attempt.Answers = result.GradedAnswers.Select(g => new AttemptAnswer
             {
@@ -76,9 +97,7 @@ namespace QuizApp.Application.Services
                 QuestionId = g.QuestionId,
             }).ToList();
 
-            _context.QuizAttempts.Add(attempt);
             await _context.SaveChangesAsync();
-
             return attempt.Id;
         }
 

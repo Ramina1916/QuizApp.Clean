@@ -6,7 +6,7 @@ namespace QuizApp.Application.DTOs.Attempt
 {
     public record SubmitQuizDto
     (
-        int QuizId,
+        int AttemptId,
         List<SubmittedAnswerDto> Submissions
      );
 }

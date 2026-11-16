@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Time Expired";
+}
+
+<div class="page-container d-flex flex-column align-items-center justify-content-center" style="min-height: 60vh;">
+    <div class="card shadow-sm text-center" style="max-width: 500px; width: 100%;">
+        <div class="card-body p-5">
+            <div class="mb-4">
+                <i class="bi bi-clock-history text-danger" style="font-size: 4rem;"></i>
+            </div>
+
+            <h2 class="card-title text-danger mb-3">Time's Up!</h2>
+
+            <p class="card-text text-muted mb-4">
+                We're sorry, but the time limit for this quiz has expired.
+                Your answers could not be submitted or graded.
+            </p>
+
+            <div class="d-grid gap-2">
+                <a asp-controller="Quizzes" asp-action="History" class="btn btn-primary">
+                    View My Quiz History
+                </a>
+                <a asp-controller="Quizzes" asp-action="Index" class="btn btn-outline-secondary">
+                    Back to Available Quizzes
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
