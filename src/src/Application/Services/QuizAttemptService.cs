@@ -22,23 +22,38 @@ namespace QuizApp.Application.Services
 
         public async Task<TakeQuizDto?> GetTakeQuizAsync(int attemptId, string userId)
         {
-            return await _context.QuizAttempts
-                .Where(a => a.Id == attemptId && a.UserId == userId && a.CompletedAt == null) // <-- Crucial security check
-                .Select(a => new TakeQuizDto(
-                    AttemptId: a.Id,
-                    QuizId: a.QuizId,
-                    Title: a.Quiz.Title,
-                    TimeLimitMinutes: a.Quiz.TimeLimitMinutes,
-                    Questions: a.Quiz.Questions
-                        .OrderBy(q => q.DisplayOrder)
-                        .Select(q => new TakeQuestionDto(
-                            q.Id,
-                            q.Text,
-                            q.QuestionType,
-                            q.Points,
-                            Options: q.Options.Select(opt => new AnswerOptionDto(opt.Id, opt.Text)).ToList()
-                        )).ToList()
-                )).FirstOrDefaultAsync();
+            var attempt = await _context.QuizAttempts
+            .Include(a => a.Quiz)
+            .ThenInclude(q => q.Questions)
+            .ThenInclude(q => q.Options)
+            .FirstOrDefaultAsync(a => a.Id == attemptId && a.UserId == userId && a.CompletedAt == null);
+
+            if (attempt is null)
+                return null;
+
+
+            if (DateTime.UtcNow > attempt.ExpiresAt)
+            {
+                attempt.CompletedAt = DateTime.UtcNow;
+                await _context.SaveChangesAsync();
+                return null;
+            }
+
+            return new TakeQuizDto(
+                AttemptId: attempt.Id,
+                QuizId: attempt.QuizId,
+                Title: attempt.Quiz.Title,
+                TimeLimitMinutes: attempt.Quiz.TimeLimitMinutes,
+                Questions: attempt.Quiz.Questions
+                    .OrderBy(q => q.DisplayOrder)
+                    .Select(q => new TakeQuestionDto(
+                        q.Id,
+                        q.Text,
+                        q.QuestionType,
+                        q.Points,
+                        Options: q.Options.Select(opt => new AnswerOptionDto(opt.Id, opt.Text)).ToList()
+                    )).ToList()
+    );
         }
 
         public async Task<int> StartAttemptAsync(int quizId, string userId)
@@ -68,23 +83,24 @@ namespace QuizApp.Application.Services
         public async Task<int> SubmitAsync(int attemptId, string userId, List<SubmittedAnswerDto> answers)
         {
             var attempt = await _context.QuizAttempts
-                .Include(a => a.Quiz)
-                    .ThenInclude(q => q.Questions)
-                        .ThenInclude(q => q.Options)
-                .FirstOrDefaultAsync(a => a.Id == attemptId && a.UserId == userId && a.CompletedAt == null);
+            .Include(a => a.Quiz)
+            .ThenInclude(q => q.Questions)
+            .ThenInclude(q => q.Options)
+            .FirstOrDefaultAsync(a => a.Id == attemptId && a.UserId == userId && a.CompletedAt == null);
 
             if (attempt is null)
                 throw new InvalidOperationException("Attempt not found, already completed, or you are not authorized.");
 
             if (DateTime.UtcNow > attempt.ExpiresAt)
             {
+                attempt.CompletedAt = DateTime.UtcNow;
+                await _context.SaveChangesAsync();
                 throw new InvalidOperationException("Submission rejected: Time limit exceeded.");
             }
 
             var result = _grading.Grade(attempt.Quiz, answers);
 
             attempt.CompletedAt = DateTime.UtcNow;
-
             attempt.Score = result.EarnedScore;
 
             attempt.Answers = result.GradedAnswers.Select(g => new AttemptAnswer
@@ -127,12 +143,12 @@ namespace QuizApp.Application.Services
         {
             return await _context.QuizAttempts
                 .Where(a => a.UserId == userId && a.CompletedAt != null)
-                .Select( a => new AttemptSummaryDto(
-                    AttemptId : a.Id,
-                    QuizTitle : a.Quiz.Title,
-                    Score : a.Score,
-                    MaxScore : a.MaxScore,
-                    CompletedAt : a.CompletedAt.Value
+                .Select(a => new AttemptSummaryDto(
+                    AttemptId: a.Id,
+                    QuizTitle: a.Quiz.Title,
+                    Score: a.Score,
+                    MaxScore: a.MaxScore,
+                    CompletedAt: a.CompletedAt.Value
                 )).OrderByDescending(a => a.CompletedAt)
                 .ToListAsync();
         }

@@ -71,7 +71,7 @@ namespace QuizApp.Presentation.Controllers
 
             if (dto is null)
             {
-                return NotFound(); // Or redirect to an error page
+                return RedirectToAction("TimeExpired");
             }
 
             return View(dto);
