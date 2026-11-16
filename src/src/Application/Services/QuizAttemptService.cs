@@ -91,11 +91,32 @@ namespace QuizApp.Application.Services
             if (attempt is null)
                 throw new InvalidOperationException("Attempt not found, already completed, or you are not authorized.");
 
+
             if (DateTime.UtcNow > attempt.ExpiresAt)
             {
                 attempt.CompletedAt = DateTime.UtcNow;
                 await _context.SaveChangesAsync();
                 throw new InvalidOperationException("Submission rejected: Time limit exceeded.");
+            }
+
+
+
+            var validQuestionIds = attempt.Quiz.Questions
+                .Select(q => q.Id)
+                .ToHashSet();
+
+            var submittedQuestionIds = answers.Select(a => a.QuestionId).ToList();
+
+            // heck if the user submitted an answer for a Question ID that doesn't belong to this quiz
+            if (submittedQuestionIds.Any(id => !validQuestionIds.Contains(id)))
+            {
+                throw new InvalidOperationException("Submission rejected: Invalid question data detected.");
+            }
+
+            // Check for duplicate answers (e.g., a manipulated payload sending two answers for Question #1)
+            if (submittedQuestionIds.Count != submittedQuestionIds.Distinct().Count())
+            {
+                throw new InvalidOperationException("Submission rejected: Duplicate answers detected.");
             }
 
             var result = _grading.Grade(attempt.Quiz, answers);
