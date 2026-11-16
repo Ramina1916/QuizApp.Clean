@@ -252,5 +252,45 @@ namespace QuizApp.Presentation.Controllers
                 return NotFound();
             }
         }
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> EditQuestion(int quizId, int Id)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (userId is null)
+                return Forbid();
+
+            var dto = await _quizService.GetQuestionForEditAsync(Id, quizId, userId);
+
+            if (dto is null)
+                return NotFound();
+
+            return View(dto);
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditQuestion(int quizId, int Id, EditQuestionDto dto)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId is null)
+                return Forbid();
+
+            if (!ModelState.IsValid)
+                return View(dto with { QuizId = quizId });
+
+            try
+            {
+                await _quizService.UpdateQuestionAsync(Id, quizId, userId, dto);
+                TempData["SuccessMessage"] = "Quiestion updated successfully.";
+                return RedirectToAction(nameof(Details), new { id = quizId });
+            }
+            catch (InvalidOperationException)
+            {
+                return NotFound();
+            }
+        }
     }
 }

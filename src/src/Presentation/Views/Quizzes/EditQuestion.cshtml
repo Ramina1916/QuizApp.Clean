@@ -1,0 +1,285 @@
+﻿@model QuizApp.Application.DTOs.Quiz.EditQuestionDto
+
+@{
+    ViewData["Title"] = "Edit Question";
+}
+
+<div class="page-container">
+    <h1>Edit Question</h1>
+
+    <form asp-action="EditQuestion" method="post" id="questionForm">
+        @Html.AntiForgeryToken()
+
+        <!-- Hidden fields for routing and model binding -->
+        <input type="hidden" name="Id" value="@Model.Id" />
+        <input type="hidden" name="QuizId" value="@Model.QuizId" />
+
+        <div class="question-block border p-3 mb-3">
+            <h4>Update Question</h4>
+
+            <!-- Server-side validation summary -->
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger mt-3" role="alert">
+                    <ul class="mb-0">
+                        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                        {
+                            <li>@error.ErrorMessage</li>
+                        }
+                    </ul>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger mt-3 d-none" role="alert"></div>
+            }
+
+            <!-- 1. MAIN FIELDS -->
+            <div class="mb-3">
+                <label class="form-label">Question Text</label>
+                <textarea name="Text" class="form-control" rows="3">@Model.Text</textarea>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Type</label>
+                    <select name="QuestionType" class="form-select question-type-select"
+                            asp-items="Html.GetEnumSelectList<QuizApp.Domain.Enums.QuestionType>()">
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Points</label>
+                    <input name="Points" type="number" class="form-control" value="@Model.Points" />
+                </div>
+            </div>
+
+            <!-- 2. MULTIPLE CHOICE OPTIONS -->
+            <div class="mc-options-section">
+                <h5>Options <small class="text-muted">(Select exactly one correct)</small></h5>
+                <div class="options-container">
+                    @for (int j = 0; j < Model.Options.Count; j++)
+                    {
+                        <div class="option-item d-flex align-items-center mb-2">
+                            <!-- Explicit Index field for robust model binding -->
+                            <input type="hidden" name="Options.Index" value="@j" />
+
+                            <div class="form-check me-2">
+                                <input class="form-check-input mc-correct-checkbox" type="checkbox"
+                                       name="Options[@j].IsCorrect" value="true"
+                                       id="mc_correct_@j"
+                                @(Model.Options[j].IsCorrect ? "checked" : "") />
+                                <label class="form-check-label" for="mc_correct_@j">Correct?</label>
+                            </div>
+                            <input name="Options[@j].Text" class="form-control me-2" placeholder="Option text" value="@Model.Options[j].Text" />
+                            <button type="button" class="btn btn-outline-danger btn-sm remove-option" title="Remove">&times;</button>
+                        </div>
+                    }
+                </div>
+                <button type="button" class="btn btn-sm btn-outline-primary mt-2 add-option-btn" data-type="mc">+ Add Option</button>
+            </div>
+
+            <!-- 3. SHORT ANSWER OPTIONS -->
+            <div class="sa-options-section" style="display:none;">
+                <h5>Acceptable Answers</h5>
+                <div class="options-container">
+                    @for (int j = 0; j < Model.Options.Count; j++)
+                    {
+                        <div class="option-item d-flex align-items-center mb-2">
+                            <!-- Explicit Index field -->
+                            <input type="hidden" name="Options.Index" value="@j" />
+                            <input type="hidden" name="Options[@j].IsCorrect" value="true" />
+                            <input type="text" name="Options[@j].Text" class="form-control me-2" placeholder="Acceptable answer" value="@Model.Options[j].Text" />
+                            <button type="button" class="btn btn-outline-danger btn-sm remove-option" title="Remove">&times;</button>
+                        </div>
+                    }
+                </div>
+                <button type="button" class="btn btn-sm btn-outline-primary mt-2 add-option-btn" data-type="sa">+ Add Answer</button>
+            </div>
+
+            <!-- 4. TRUE/FALSE OPTIONS -->
+            <div class="tf-options-section" style="display:none;">
+                <h5>Correct Answer</h5>
+                <div class="form-check mb-2">
+                    <input type="hidden" name="Options.Index" value="0" />
+                    <input class="form-check-input" type="radio" name="Options[0].IsCorrect" id="tf_true" value="true"
+                    @(Model.Options.Any(o => o.Text == "True" && o.IsCorrect) ? "checked" : "") />
+                    <label class="form-check-label" for="tf_true">True</label>
+                    <input type="hidden" name="Options[0].Text" value="True" />
+                </div>
+                <div class="form-check">
+                    <input type="hidden" name="Options.Index" value="1" />
+                    <input class="form-check-input" type="radio" name="Options[1].IsCorrect" id="tf_false" value="false"
+                    @(Model.Options.Any(o => o.Text == "False" && o.IsCorrect) ? "checked" : "") />
+                    <label class="form-check-label" for="tf_false">False</label>
+                    <input type="hidden" name="Options[1].Text" value="False" />
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex gap-2 mt-4">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <a asp-action="Details" asp-route-id="@Model.QuizId" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<!-- TEMPLATES FOR DYNAMIC CLONING -->
+<script type="text/template" id="mc-option-template">
+    <div class="option-item d-flex align-items-center mb-2">
+        <input type="hidden" name="Options.Index" value="__OINDEX__" />
+        <div class="form-check me-2">
+            <input class="form-check-input mc-correct-checkbox" type="checkbox"
+                   name="Options[__OINDEX__].IsCorrect" value="true"
+                   id="mc_correct___OINDEX__" />
+            <label class="form-check-label" for="mc_correct___OINDEX__">Correct?</label>
+        </div>
+        <input type="text" class="form-control me-2" name="Options[__OINDEX__].Text" placeholder="Option text" />
+        <button type="button" class="btn btn-outline-danger btn-sm remove-option" title="Remove">&times;</button>
+    </div>
+</script>
+
+<script type="text/template" id="sa-option-template">
+    <div class="option-item d-flex align-items-center mb-2">
+        <input type="hidden" name="Options.Index" value="__OINDEX__" />
+        <input type="hidden" name="Options[__OINDEX__].IsCorrect" value="true" />
+        <input type="text" class="form-control me-2" name="Options[__OINDEX__].Text" placeholder="Acceptable answer" />
+        <button type="button" class="btn btn-outline-danger btn-sm remove-option" title="Remove">&times;</button>
+    </div>
+</script>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('questionForm');
+            const questionTypeSelect = document.querySelector('.question-type-select');
+
+            // 1. Make Multiple Choice checkboxes behave like radio buttons
+            document.addEventListener('change', function(e) {
+                if (e.target.classList.contains('mc-correct-checkbox') && e.target.checked) {
+                    document.querySelectorAll('.mc-correct-checkbox').forEach(cb => {
+                        if (cb !== e.target) cb.checked = false;
+                    });
+                }
+            });
+
+            // 2. Toggle Visibility and Disable/Enable inputs
+            const updateVisibility = () => {
+                const type = questionTypeSelect.value; // "1"=MC, "2"=TF, "3"=SA
+
+                const toggleInputs = (sectionSelector, isEnabled) => {
+                    document.querySelectorAll(`${sectionSelector} input, ${sectionSelector} select, ${sectionSelector} textarea`)
+                        .forEach(input => input.disabled = !isEnabled);
+                };
+
+                if (type === '1') {
+                    document.querySelector('.mc-options-section').style.display = 'block';
+                    toggleInputs('.mc-options-section', true);
+                    document.querySelector('.sa-options-section').style.display = 'none';
+                    toggleInputs('.sa-options-section', false);
+                    document.querySelector('.tf-options-section').style.display = 'none';
+                    toggleInputs('.tf-options-section', false);
+                } else if (type === '2') {
+                    document.querySelector('.mc-options-section').style.display = 'none';
+                    toggleInputs('.mc-options-section', false);
+                    document.querySelector('.sa-options-section').style.display = 'none';
+                    toggleInputs('.sa-options-section', false);
+                    document.querySelector('.tf-options-section').style.display = 'block';
+                    toggleInputs('.tf-options-section', true);
+                } else if (type === '3') {
+                    document.querySelector('.mc-options-section').style.display = 'none';
+                    toggleInputs('.mc-options-section', false);
+                    document.querySelector('.sa-options-section').style.display = 'block';
+                    toggleInputs('.sa-options-section', true);
+                    document.querySelector('.tf-options-section').style.display = 'none';
+                    toggleInputs('.tf-options-section', false);
+                }
+
+                const clientErrorDiv = document.querySelector('.alert-danger:not([role="alert"])');
+                if (clientErrorDiv) clientErrorDiv.classList.add('d-none');
+            };
+
+            updateVisibility();
+            questionTypeSelect.addEventListener('change', updateVisibility);
+
+            // 3. Dynamic Add Option
+            form.addEventListener('click', function(e) {
+                if (e.target.classList.contains('add-option-btn')) {
+                    const type = e.target.getAttribute('data-type');
+                    const uniqueIndex = Date.now().toString() + Math.random().toString(36).substr(2, 5);
+                    const templateId = type === 'mc' ? 'mc-option-template' : 'sa-option-template';
+                    let html = document.getElementById(templateId).innerHTML;
+
+                    html = html.replace(/__OINDEX__/g, uniqueIndex);
+                    const container = type === 'mc'
+                        ? document.querySelector('.mc-options-section .options-container')
+                        : document.querySelector('.sa-options-section .options-container');
+
+                    container.insertAdjacentHTML('beforeend', html);
+                }
+            });
+
+            // 4. Dynamic Remove Option
+            form.addEventListener('click', function(e) {
+                if (e.target.classList.contains('remove-option')) {
+                    const type = questionTypeSelect.value;
+                    const container = type === '1'
+                        ? document.querySelector('.mc-options-section .options-container')
+                        : document.querySelector('.sa-options-section .options-container');
+
+                    const minOptions = type === '1' ? 2 : 1;
+                    if (container.children.length <= minOptions) {
+                        alert(type === '1' ? "Multiple Choice requires at least two options." : "Short Answer requires at least one acceptable answer.");
+                        return;
+                    }
+                    e.target.closest('.option-item').remove();
+                }
+            });
+
+            // 5. Client-Side Validation on Submit
+            form.addEventListener('submit', function(e) {
+                const errorDiv = document.querySelector('.alert-danger:not([role="alert"])');
+                if (errorDiv) errorDiv.classList.add('d-none');
+
+                let errorMsg = "";
+                let isValid = true;
+                const type = questionTypeSelect.value;
+                const questionText = document.querySelector('textarea[name="Text"]').value.trim();
+
+                if (!questionText) {
+                    errorMsg = "Question text cannot be empty.";
+                    isValid = false;
+                } else if (type === '1') {
+                    const options = document.querySelectorAll('.mc-options-section .option-item');
+                    const correctCheckbox = document.querySelector('.mc-options-section .mc-correct-checkbox:checked');
+                    const hasText = Array.from(options).some(opt => opt.querySelector('input[type="text"]').value.trim() !== "");
+
+                    if (options.length < 2) errorMsg = "Multiple Choice requires at least two options.";
+                    else if (!hasText) errorMsg = "Multiple Choice options cannot be entirely blank.";
+                    else if (!correctCheckbox) errorMsg = "Multiple Choice requires exactly ONE correct answer to be selected.";
+                } else if (type === '3') {
+                    const answers = document.querySelectorAll('.sa-options-section .option-item');
+                    const hasText = Array.from(answers).some(ans => ans.querySelector('input[type="text"]').value.trim() !== "");
+                    if (answers.length < 1 || !hasText) errorMsg = "Short Answer requires at least one non-empty acceptable answer.";
+                } else if (type === '2') {
+                    const radios = document.querySelectorAll('.tf-options-section input[type="radio"]');
+                    const hasSelected = Array.from(radios).some(r => r.checked);
+                    if (!hasSelected) errorMsg = "True/False requires you to select the correct answer.";
+                }
+
+                if (errorMsg && errorDiv) {
+                    errorDiv.textContent = errorMsg;
+                    errorDiv.classList.remove('d-none');
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+}

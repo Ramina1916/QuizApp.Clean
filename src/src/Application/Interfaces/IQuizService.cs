@@ -19,8 +19,12 @@ namespace QuizApp.Application.Interfaces
 
         Task PublishAsync(int quizId, string userId);
 
-        Task<EditQuizDto?> GetQuizForEditAsync(int quizId, string userId); 
+        Task<EditQuizDto> GetQuizForEditAsync(int quizId, string userId); 
 
         Task UpdateQuizAsync(int quizId, string userId, EditQuizDto dto);
+
+        Task<EditQuestionDto> GetQuestionForEditAsync(int questionId, int quizId, string userId);
+
+        Task UpdateQuestionAsync(int questionId, int quizId, string userId, EditQuestionDto dto);
     }
 }

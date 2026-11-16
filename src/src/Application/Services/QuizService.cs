@@ -82,7 +82,7 @@ namespace QuizApp.Application.Services
             // find() make the query execute on the client side, which can lead to performance issues and unexpected behavior when working with related entities.
         }
 
-        public async Task AddQuestionAsync(int quizId,string userId,CreateQuestionDto newQuestion)
+        public async Task AddQuestionAsync(int quizId, string userId, CreateQuestionDto newQuestion)
         {
             ArgumentNullException.ThrowIfNull(newQuestion);
 
@@ -118,14 +118,14 @@ namespace QuizApp.Application.Services
                 Options = validOptions.Select(o => new AnswerOption
                 {
                     Text = o.Text.Trim(),
-                    IsCorrect = newQuestion.QuestionType == QuestionType.ShortAnswer? true: o.IsCorrect
+                    IsCorrect = newQuestion.QuestionType == QuestionType.ShortAnswer ? true : o.IsCorrect
                 }).ToList()
             };
 
 
             _context.Questions.Add(questionEntity);
             await _context.SaveChangesAsync();
-        } 
+        }
 
         public async Task<int> RemoveQuestionAsync(int questionId, int quizId, string userId)
         {
@@ -136,7 +136,7 @@ namespace QuizApp.Application.Services
                 .FirstOrDefaultAsync();
 
             if (question is null)
-                throw new InvalidOperationException("Question not found or not editable.");
+                throw new InvalidOperationException("question not found or not editable.");
 
             question.IsDeleted = true;
             question.DeletedAt = DateTime.UtcNow;
@@ -216,6 +216,72 @@ namespace QuizApp.Application.Services
             quiz.Category = dto.Category.Trim();
             quiz.Difficulty = dto.Difficulty;
             quiz.TimeLimitMinutes = dto.TimeLimitMinutes;
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<EditQuestionDto> GetQuestionForEditAsync(int questionId, int quizId, string userId)
+        {
+            var question = await _context.Questions
+                .Include(q => q.Options) // eager loading `Options` so we can map them
+                .FirstOrDefaultAsync(q => q.Id == questionId &&
+                                  q.QuizId == quizId &&
+                                  q.Quiz.CreatedByUserId == userId &&
+                                  q.Quiz.Status == QuizStatus.Draft);
+
+            if (question is null)
+                throw new InvalidOperationException(
+                    "Question not found or you are not authorised to edit it.");
+
+
+            return new EditQuestionDto
+            (
+                Id: question.Id,
+                QuizId: question.QuizId,
+                Text: question.Text,
+                QuestionType: question.QuestionType,
+                Points: question.Points,
+                Options: question.Options
+                .Select(q => new OptionSlotDto(
+                    Text: q.Text,
+                    IsCorrect: q.IsCorrect
+                )).ToList()
+            );
+        }
+
+        public async Task UpdateQuestionAsync(int questionId, int quizId, string userId, EditQuestionDto dto)
+        {
+            ArgumentNullException.ThrowIfNull(dto);
+
+            var question = await _context.Questions
+                .Include(q => q.Options) // Important: Load options so we can map them
+                .FirstOrDefaultAsync(q => q.Id == questionId &&
+                                  q.QuizId == quizId &&
+                                  q.Quiz.CreatedByUserId == userId &&
+                                  q.Quiz.Status == QuizStatus.Draft);
+
+            if (question is null)
+                throw new InvalidOperationException(
+                    "Question not found or you are not authorised to edit it.");
+
+            var newOptions = dto.Options
+                   .Where(o => !string.IsNullOrWhiteSpace(o.Text))
+                   .Select(o => new AnswerOption
+                   {
+                       Text = o.Text.Trim(),
+                       IsCorrect = dto.QuestionType == QuestionType.ShortAnswer ? true : o.IsCorrect
+                   }).ToList();
+
+            // Replace the collection in EF Core
+            question.Options.Clear();
+            foreach (var option in newOptions)
+            {
+                question.Options.Add(option);
+            }
+
+            question.Text = dto.Text.Trim();
+            question.QuestionType = dto.QuestionType;
+            question.Points = dto.Points;
 
             await _context.SaveChangesAsync();
         }
