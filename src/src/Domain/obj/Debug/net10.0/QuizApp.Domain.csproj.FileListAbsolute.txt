@@ -23,3 +23,4 @@ C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\QuizApp.Do
 C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\refint\QuizApp.Domain.dll
 C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\QuizApp.Domain.pdb
 C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\ref\QuizApp.Domain.dll
+C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Domain\obj\Debug\net10.0\QuizApp..4BD0E8EA.Up2Date

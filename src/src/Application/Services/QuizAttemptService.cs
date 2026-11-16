@@ -31,7 +31,6 @@ namespace QuizApp.Application.Services
             if (attempt is null)
                 return null;
 
-
             if (DateTime.UtcNow > attempt.ExpiresAt)
             {
                 attempt.CompletedAt = DateTime.UtcNow;
@@ -43,6 +42,7 @@ namespace QuizApp.Application.Services
                 AttemptId: attempt.Id,
                 QuizId: attempt.QuizId,
                 Title: attempt.Quiz.Title,
+                ExpiresAt: attempt.ExpiresAt,
                 TimeLimitMinutes: attempt.Quiz.TimeLimitMinutes,
                 Questions: attempt.Quiz.Questions
                     .OrderBy(q => q.DisplayOrder)

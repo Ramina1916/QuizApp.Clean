@@ -6,6 +6,7 @@
          int QuizId,
          string Title,
          int TimeLimitMinutes,
+         DateTime ExpiresAt,
          List<TakeQuestionDto> Questions
         );
 }

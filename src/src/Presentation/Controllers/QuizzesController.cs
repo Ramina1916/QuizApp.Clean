@@ -104,6 +104,12 @@ namespace QuizApp.Presentation.Controllers
         }
 
         [HttpGet]
+        public IActionResult TimeExpired()
+        {
+            return View();
+        }
+
+        [HttpGet]
         [Authorize]
         public async Task<IActionResult> Results(int id)
         {
