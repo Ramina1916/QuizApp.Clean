@@ -86,11 +86,13 @@ namespace QuizApp.Application.Services
             .Include(a => a.Quiz)
             .ThenInclude(q => q.Questions)
             .ThenInclude(q => q.Options)
-            .FirstOrDefaultAsync(a => a.Id == attemptId && a.UserId == userId && a.CompletedAt == null);
+            .FirstOrDefaultAsync(a => a.Id == attemptId && a.UserId == userId);
 
             if (attempt is null)
                 throw new InvalidOperationException("Attempt not found, already completed, or you are not authorized.");
 
+            if (attempt.CompletedAt is not null)
+                return attempt.Id;
 
             if (DateTime.UtcNow > attempt.ExpiresAt)
             {
