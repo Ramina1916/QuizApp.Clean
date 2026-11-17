@@ -5,6 +5,7 @@ using QuizApp.Application.Services;
 using QuizApp.Infrastructure.Persistence;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using QuizApp.Infrastructure.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,13 @@ builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddDbContext<IApplicationDbContext, ApplicationDbContext>(
     options => options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection"))); // get the directory from appsettings.json
+
+// Register IRepository
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IQuizRepository, QuizRepository>();
+
+// Register unit of work
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Registe Validators in the Application assembly
 builder.Services.AddValidatorsFromAssemblyContaining<QuizApp.Application.Validators.CreateQuestionDtoValidator>();
