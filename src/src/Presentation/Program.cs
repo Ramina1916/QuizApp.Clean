@@ -21,6 +21,7 @@ builder.Services.AddDbContext<IApplicationDbContext, ApplicationDbContext>(
 // Register IRepository
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IQuizRepository, QuizRepository>();
+builder.Services.AddScoped<IQuizAttemptRepository, QuizAttemptRepository>();
 
 // Register unit of work
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();

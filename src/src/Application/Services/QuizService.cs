@@ -4,15 +4,11 @@ using QuizApp.Domain.Entities;
 using QuizApp.Domain.Enums;
 namespace QuizApp.Application.Services
 {
-    // install the Microsoft.EntityFrameworkCore NuGet package to use the ToListAsync extension method
     public class QuizService : IQuizService
     {
-        // Business logic for the QuizService goes here. The QuizService is responsible for handling all the business logic related to quizzes
         private readonly IQuizRepository _quizRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        // constructor to inject the IApplicationDbContext dependency into the QuizService class.
-        // This allows the service to interact with the database context for performing CRUD operations on quizzes and related entities.
         public QuizService(IQuizRepository quizRepository, IUnitOfWork unitOfWork)
         {
             _quizRepository = quizRepository;

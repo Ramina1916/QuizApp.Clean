@@ -44,4 +44,8 @@ public interface IQuizRepository : IRepository<Quiz>
         int quizId,
         string userId,
         CancellationToken cancellationToken = default);
+
+    Task<Quiz?> GetActiveQuizForAttemptAsync(
+    int quizId,
+    CancellationToken cancellationToken = default);
 }

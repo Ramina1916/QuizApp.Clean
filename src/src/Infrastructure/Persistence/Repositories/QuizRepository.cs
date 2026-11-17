@@ -125,4 +125,15 @@ public class QuizRepository : Repository<Quiz>, IQuizRepository
     {
         _context.Questions.Add(question);
     }
+
+    public Task<Quiz?> GetActiveQuizForAttemptAsync(int quizId, CancellationToken cancellationToken = default)
+    {
+        return _context.Quizzes
+            .AsNoTracking()
+            .Include(q => q.Questions)
+            .FirstOrDefaultAsync(
+                q => q.Id == quizId &&
+                     q.Status == QuizStatus.Active,
+                cancellationToken);
+    }
 }
