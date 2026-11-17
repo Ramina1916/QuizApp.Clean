@@ -14,7 +14,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddFluentValidationAutoValidation();
 
-builder.Services.AddDbContext<IApplicationDbContext, ApplicationDbContext>(
+builder.Services.AddDbContext<ApplicationDbContext>(
     options => options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection"))); // get the directory from appsettings.json
 
