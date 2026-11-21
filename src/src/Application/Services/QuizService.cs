@@ -98,23 +98,27 @@ namespace QuizApp.Application.Services
 
             var order = await _quizRepository.GetQuestionCountAsync(quizId);
 
-            var questionEntity = new Question
+            var newQuestionentity = new Question(
+                quizId,
+                newQuestion.Text.Trim(),
+                newQuestion.QuestionType,
+                order,
+                newQuestion.Points
+                );
+
+
+            foreach (var option in validOptions)
             {
-                QuizId = quizId,
-                Text = newQuestion.Text.Trim(),
-                QuestionType = newQuestion.QuestionType,
-                DisplayOrder = order,
-                Points = newQuestion.Points,
-                Options = validOptions.Select(o => new AnswerOption
+                newQuestionentity.AddOption(new AnswerOption
                 {
-                    Text = o.Text.Trim(),
+                    Text = option.Text.Trim(),
                     IsCorrect = newQuestion.QuestionType == QuestionType.ShortAnswer
                         ? true
-                        : o.IsCorrect
-                }).ToList()
-            };
+                        : option.IsCorrect
+                });
+            }
 
-            _quizRepository.AddQuestion(questionEntity);
+            _quizRepository.AddQuestion(newQuestionentity);
             await _unitOfWork.SaveChangesAsync();
         }
 
@@ -126,8 +130,7 @@ namespace QuizApp.Application.Services
             if (question is null)
                 throw new InvalidOperationException("Question not found or not editable.");
 
-            question.IsDeleted = true;
-            question.DeletedAt = DateTime.UtcNow;
+            question.Delete();
 
             await _unitOfWork.SaveChangesAsync();
             return quizId;
@@ -242,9 +245,11 @@ namespace QuizApp.Application.Services
                 question.Options.Add(option);
             }
 
-            question.Text = dto.Text.Trim();
-            question.QuestionType = dto.QuestionType;
-            question.Points = dto.Points;
+            question.UpdateDetails(
+                dto.Text,
+                dto.Points,
+                dto.QuestionType
+                );
 
             await _unitOfWork.SaveChangesAsync();
         }
