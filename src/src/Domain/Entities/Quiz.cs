@@ -42,9 +42,9 @@ namespace QuizApp.Domain.Entities
             ArgumentNullException.ThrowIfNull(category);
             ArgumentNullException.ThrowIfNull(createdByUserId);
 
+
             title = title.Trim();
             category = category.Trim();
-            createdByUserId = createdByUserId.Trim();
 
             Validate(title, category, timeLimitMinutes);
 
@@ -60,7 +60,6 @@ namespace QuizApp.Domain.Entities
 
 
         //  -------------------------------------------------------------------------------------------------------
-
 
         // Domain methods
 
