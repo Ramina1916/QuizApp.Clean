@@ -15,21 +15,17 @@ namespace QuizApp.Application.Services
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<int> CreateQuizAsync(CreateQuizDto command, string userId)
+        public async Task<int> CreateQuizAsync(CreateQuizDto newQuiz, string userId)
         {
-            var quiz = new Quiz
-            {
-                Title = command.Title,
-                Description = command.Description,
-                Category = command.Category,
-                Difficulty = command.Difficulty,
-                TimeLimitMinutes = command.TimeLimitMinutes,
-                Status = QuizStatus.Draft,
-                CreatedByUserId = userId,
-                CreatedAt = DateTime.UtcNow
-            };
-
-
+            var quiz = new Quiz(
+                newQuiz.Title,
+                newQuiz.Description,
+                newQuiz.Category,
+                newQuiz.Difficulty,
+                newQuiz.TimeLimitMinutes,
+                userId
+                );
+           
             _quizRepository.Add(quiz);
             await _unitOfWork.SaveChangesAsync();
             return quiz.Id;
@@ -145,8 +141,7 @@ namespace QuizApp.Application.Services
             if (quiz is null)
                 throw new InvalidOperationException("Quiz not found or not yours.");
 
-            quiz.IsDeleted = true;
-            quiz.DeletedAt = DateTime.UtcNow;
+            quiz.Delete();
 
             await _unitOfWork.SaveChangesAsync();
         }
@@ -160,7 +155,7 @@ namespace QuizApp.Application.Services
                 throw new InvalidOperationException(
                     "Quiz not found, not yours, or already published.");
 
-            quiz.Status = QuizStatus.Active;
+            quiz.Publish();
 
             await _unitOfWork.SaveChangesAsync();
         }
@@ -192,15 +187,7 @@ namespace QuizApp.Application.Services
                 throw new InvalidOperationException(
                     "Quiz not found or you are not authorised to edit it.");
 
-            quiz.Title = dto.Title.Trim();
-            quiz.Description = string.IsNullOrWhiteSpace(dto.Description)
-                ? null
-                : dto.Description.Trim();
-
-            quiz.Category = dto.Category.Trim();
-            quiz.Difficulty = dto.Difficulty;
-            quiz.TimeLimitMinutes = dto.TimeLimitMinutes;
-
+            quiz.UpdateDetails(dto.Title, dto.Description, dto.Category, dto.Difficulty, dto.TimeLimitMinutes);
             await _unitOfWork.SaveChangesAsync();
 
         }
