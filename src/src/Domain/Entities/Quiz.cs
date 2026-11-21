@@ -45,7 +45,6 @@ namespace QuizApp.Domain.Entities
 
             title = title.Trim();
             category = category.Trim();
-
             Validate(title, category, timeLimitMinutes);
 
             Title = title;
@@ -95,7 +94,6 @@ namespace QuizApp.Domain.Entities
             DeletedAt = DateTime.UtcNow;
         }
 
-        
         // DRY principle
         private static void Validate(string title, string category, int timeLimitMinutes)
         {
