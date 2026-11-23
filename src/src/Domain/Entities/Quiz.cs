@@ -66,13 +66,19 @@ namespace QuizApp.Domain.Entities
         {
             if (Status == QuizStatus.Active) throw new InvalidOperationException("Cannot edit a published quiz.");
 
-            Title = title.Trim();
-            Description = description?.Trim();
-            Category = category.Trim();
-            Difficulty = difficulty;
-            TimeLimitMinutes = timeLimitMinutes;
+            ArgumentNullException.ThrowIfNull(title);
+            ArgumentNullException.ThrowIfNull(category);
+
+            title = title.Trim();
+            category = category.Trim();
 
             Validate(title, category, timeLimitMinutes);
+
+            Title = title;
+            Description = description?.Trim();
+            Category = category;
+            Difficulty = difficulty;
+            TimeLimitMinutes = timeLimitMinutes;
         }
 
 
@@ -82,6 +88,16 @@ namespace QuizApp.Domain.Entities
                 throw new InvalidOperationException(
                     "Only draft quizzes can be published.");
 
+            foreach (var q in Questions)
+            {
+                if (q.QuestionType == QuestionType.MultipleChoice && q.Options.Count < 2)
+                    throw new InvalidOperationException("MC needs ≥2 options.");
+                if (q.QuestionType is QuestionType.MultipleChoice or QuestionType.TrueFalse
+                    && q.Options.Count(o => o.IsCorrect) != 1)
+                    throw new InvalidOperationException("Needs exactly one correct answer.");
+                if (q.QuestionType == QuestionType.ShortAnswer && !q.Options.Any())
+                    throw new InvalidOperationException("Short Answer needs an acceptable answer.");
+            }
             Status = QuizStatus.Active;
         }
 

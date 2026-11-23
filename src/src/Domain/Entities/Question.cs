@@ -54,7 +54,6 @@ namespace QuizApp.Domain.Entities
 
         //  -------------------------------------------------------------------------------------------------------
 
-
         // Domain methods
         public void UpdateDetails(string text, int points, QuestionType questionType)
         {
@@ -76,6 +75,8 @@ namespace QuizApp.Domain.Entities
         {
             if (QuestionType == QuestionType.ShortAnswer)
                 isCorrect = true;
+            else if (isCorrect && Options.Any(o => o.IsCorrect))
+                throw new InvalidOperationException("Only one correct answer allowed for this type.");
 
             Options.Add(new AnswerOption(text, isCorrect));
         }

@@ -55,11 +55,15 @@ namespace QuizApp.Domain.Entities
         // Domain methods
         public bool IsCompleted => CompletedAt.HasValue;
 
-        public void Expire()
+        public void Expire(DateTime now)
         {
             if (IsCompleted)
                 return;
-            CompletedAt = ExpiresAt;
+
+            if (now < ExpiresAt)
+                throw new InvalidOperationException("The attempt has not expired.");
+
+            CompletedAt = now;
         }
 
         public void Complete(int score, IEnumerable<AttemptAnswer> answers)
