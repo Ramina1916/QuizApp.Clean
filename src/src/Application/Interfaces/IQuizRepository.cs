@@ -12,10 +12,6 @@ public interface IQuizRepository : IRepository<Quiz>
         string userId,
         CancellationToken cancellationToken = default);
 
-    Task<int> GetQuestionCountAsync(
-    int quizId,
-    CancellationToken cancellationToken = default);
-
     Task<Quiz?> GetQuizForOwnerAsync(
         int quizId,
         string userId,
@@ -33,6 +29,10 @@ public interface IQuizRepository : IRepository<Quiz>
         int quizId,
         string userId,
         CancellationToken cancellationToken = default);
+
+    Task<int> GetQuestionCountAsync(
+    int quizId,
+    CancellationToken cancellationToken = default);
 
     Task<Question?> GetQuestionForEditAsync(
         int questionId,

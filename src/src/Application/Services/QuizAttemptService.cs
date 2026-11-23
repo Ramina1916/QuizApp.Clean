@@ -28,9 +28,9 @@ namespace QuizApp.Application.Services
             if (attempt is null)
                 return null;
 
-            if (DateTime.UtcNow > attempt.ExpiresAt)
+            if (DateTime.UtcNow >= attempt.ExpiresAt)
             {
-                attempt.CompletedAt = DateTime.UtcNow;
+                attempt.Expire(DateTime.UtcNow);
                 await _unitOfWork.SaveChangesAsync();
                 return null;
             }
@@ -62,13 +62,13 @@ namespace QuizApp.Application.Services
             var startedAt = DateTime.UtcNow;
 
             var attempt = new QuizAttempt
-            {
-                QuizId = quizId,
-                UserId = userId,
-                StartedAt = startedAt,
-                ExpiresAt = startedAt.AddMinutes(quiz.TimeLimitMinutes), // CALCULATE DEADLINE HERE
-                MaxScore = quiz.Questions.Sum(q => q.Points)
-            };
+            (
+                quizId,
+                userId,
+                startedAt,
+                startedAt.AddMinutes(quiz.TimeLimitMinutes), // CALCULATE DEADLINE HERE
+                quiz.Questions.Sum(q => q.Points)
+            );
 
             _quizAttemptRepository.Add(attempt);
             await _unitOfWork.SaveChangesAsync();
@@ -85,9 +85,9 @@ namespace QuizApp.Application.Services
             if (attempt.CompletedAt is not null)
                 return attempt.Id;
 
-            if (DateTime.UtcNow > attempt.ExpiresAt)
+            if (DateTime.UtcNow >= attempt.ExpiresAt)
             {
-                attempt.CompletedAt = DateTime.UtcNow;
+                attempt.Expire(DateTime.UtcNow);
                 await _unitOfWork.SaveChangesAsync();
                 throw new InvalidOperationException("Submission rejected: Time limit exceeded.");
             }
@@ -114,18 +114,19 @@ namespace QuizApp.Application.Services
 
             var result = _grading.Grade(attempt.Quiz, answers);
 
-            attempt.CompletedAt = DateTime.UtcNow;
-            attempt.Score = result.EarnedScore;
+            attempt.Complete(
+                result.EarnedScore,
+                result.GradedAnswers.Select(g => new AttemptAnswer(
+                g.QuestionId,
+                g.QuestionTextSnapshot,
+                g.SelectedOptionTextSnapshot,
+                g.UserAnswer,
+                g.IsCorrect,
+                g.PointsEarned))
+               .ToList()
+            );
 
-            attempt.Answers = result.GradedAnswers.Select(g => new AttemptAnswer
-            {
-                QuestionTextSnapshot = g.QuestionTextSnapshot,
-                SelectedOptionTextSnapshot = g.SelectedOptionTextSnapshot,
-                UserAnswer = g.UserAnswer,
-                IsCorrect = g.IsCorrect,
-                PointsEarned = g.PointsEarned,
-                QuestionId = g.QuestionId,
-            }).ToList();
+
 
             await _unitOfWork.SaveChangesAsync();
             return attempt.Id;

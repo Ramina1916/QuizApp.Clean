@@ -97,8 +97,8 @@ namespace QuizApp.Application.Services
                 .ToList();
 
             var order = await _quizRepository.GetQuestionCountAsync(quizId);
-
-            var newQuestionentity = new Question(
+            
+            var questionEntity = new Question(
                 quizId,
                 newQuestion.Text.Trim(),
                 newQuestion.QuestionType,
@@ -106,19 +106,10 @@ namespace QuizApp.Application.Services
                 newQuestion.Points
                 );
 
+            foreach (var slot in validOptions)
+                questionEntity.AddOption(slot.Text, slot.IsCorrect);
 
-            foreach (var option in validOptions)
-            {
-                newQuestionentity.AddOption(new AnswerOption
-                {
-                    Text = option.Text.Trim(),
-                    IsCorrect = newQuestion.QuestionType == QuestionType.ShortAnswer
-                        ? true
-                        : option.IsCorrect
-                });
-            }
-
-            _quizRepository.AddQuestion(newQuestionentity);
+            _quizRepository.AddQuestion(questionEntity);
             await _unitOfWork.SaveChangesAsync();
         }
 
@@ -230,26 +221,14 @@ namespace QuizApp.Application.Services
                 throw new InvalidOperationException(
                     "Question not found or you are not authorised to edit it.");
 
-            var newOptions = dto.Options
-                   .Where(o => !string.IsNullOrWhiteSpace(o.Text))
-                   .Select(o => new AnswerOption
-                   {
-                       Text = o.Text.Trim(),
-                       IsCorrect = dto.QuestionType == QuestionType.ShortAnswer ? true : o.IsCorrect
-                   }).ToList();
 
-            // Replace the collection in EF Core
-            question.Options.Clear();
-            foreach (var option in newOptions)
+            question.ClearOptions();
+            question.UpdateDetails(dto.Text, dto.Points, dto.QuestionType);
+
+            foreach (var slot in dto.Options.Where(o => !string.IsNullOrWhiteSpace(o.Text)))
             {
-                question.Options.Add(option);
+                question.AddOption(slot.Text, slot.IsCorrect);  // domain decides correctness rules
             }
-
-            question.UpdateDetails(
-                dto.Text,
-                dto.Points,
-                dto.QuestionType
-                );
 
             await _unitOfWork.SaveChangesAsync();
         }
