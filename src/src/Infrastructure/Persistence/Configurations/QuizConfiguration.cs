@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using QuizApp.Domain.Entities;
+using QuizApp.Infrastructure.Identity;
 
 
 namespace QuizApp.Infrastructure.Persistence.EntityConfiguration
@@ -48,8 +48,8 @@ namespace QuizApp.Infrastructure.Persistence.EntityConfiguration
                    .OnDelete(DeleteBehavior.Cascade);
 
 
-            // Configures the relationship between Quiz and IdentityUser (CreatedByUserId) with restrict delete behavior.)
-            builder.HasOne<IdentityUser>()
+            // Configures the relationship between Quiz and ApplicationUser (CreatedByUserId) with restrict delete behavior.)
+            builder.HasOne<ApplicationUser>()
                 .WithMany() // It is empty because we don't have a navigation property in IdentityUser for the quizzes they created.
                 .HasForeignKey(q => q.CreatedByUserId)
                 .IsRequired()

@@ -1,10 +1,13 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@using QuizApp.Infrastructure.Identity
+@inject SignInManager<ApplicationUser> SignInManager
 <ul class="navbar-nav">
     @if (SignInManager.IsSignedIn(User))
     {
-        <li class="nav-item"><a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index">Hello @User.Identity!.Name!</a></li>
+        var name = User.FindFirst(System.Security.Claims.ClaimTypes.GivenName)?.Value
+            ?? User.FindFirst(System.Security.Claims.ClaimTypes.Email)?.Value
+            ?? User.Identity?.Name;
+        <li class="nav-item"><a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index">Hello @name!</a></li>
         <li class="nav-item"><form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" method="post"><button type="submit" class="nav-link btn btn-link">Logout</button></form></li>
     }
     else

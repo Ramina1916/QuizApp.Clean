@@ -2,12 +2,13 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using QuizApp.Domain.Entities;
+using QuizApp.Infrastructure.Identity;
 
 namespace QuizApp.Infrastructure.Persistence // Persistence is a layer for data access and storage, responsible for managing the application's data and interacting with the database.
 {
-    // IdentityDbContext<IdentityUser> = EF Core + ASP.NET Identity (Users, Roles, etc.)
+    // IdentityDbContext<ApplicationUser> = EF Core + ASP.NET Identity (Users, Roles, etc.)
     // This class uses EF Core + ASP.NET Identity to manage users, roles, and other identity-related features.
-    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { } // Constructor that takes DbContextOptions and passes them to the base class constructor.
 

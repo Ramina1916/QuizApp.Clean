@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using QuizApp.Domain.Entities;
+using QuizApp.Infrastructure.Identity;
 
 namespace QuizApp.Infrastructure.Persistence.Configurations
 {
@@ -23,8 +23,8 @@ namespace QuizApp.Infrastructure.Persistence.Configurations
                 .HasForeignKey(a => a.QuizId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Configures the relationship between QuizAttempt and IdentityUser (UserId) with restrict delete behavior.
-            builder.HasOne<IdentityUser>()
+            // Configures the relationship between QuizAttempt and ApplicationUser (UserId) with restrict delete behavior.
+            builder.HasOne<ApplicationUser>()
                 .WithMany()
                 .HasForeignKey(a => a.UserId)
                 .IsRequired()
