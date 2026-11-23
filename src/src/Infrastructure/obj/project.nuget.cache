@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QHvSQf3NrnM=",
+  "dgSpecHash": "ln0zjdSWY14=",
   "success": true,
-  "projectFilePath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Infrastructure\\QuizApp.Infrastructure.csproj",
+  "projectFilePath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Infrastructure\\QuizApp.Infrastructure.csproj",
   "expectedPackageFiles": [
     "D:\\NuGetPackages\\azure.core\\1.50.0\\azure.core.1.50.0.nupkg.sha512",
     "D:\\NuGetPackages\\azure.identity\\1.17.1\\azure.identity.1.17.1.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NeRPFYa4EvU=",
+  "dgSpecHash": "EYFbr9J08Cw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\raffi\\Desktop\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj",
+  "projectFilePath": "E:\\Programming\\BackEnd\\C# practice\\C# exercise\\QuizApp.Clean\\src\\src\\Application\\QuizApp.Application.csproj",
   "expectedPackageFiles": [
     "D:\\NuGetPackages\\fluentvalidation\\12.2.0\\fluentvalidation.12.2.0.nupkg.sha512",
     "D:\\NuGetPackages\\microsoft.entityframeworkcore\\10.0.14\\microsoft.entityframeworkcore.10.0.14.nupkg.sha512",

@@ -7,6 +7,143 @@ E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentatio
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Presentation.runtimeconfig.json
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Presentation.dll
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Presentation.pdb
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Azure.Core.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Azure.Identity.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\FluentValidation.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\FluentValidation.AspNetCore.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Humanizer.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.UI.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Identity.Client.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Identity.Client.Broker.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Identity.Client.NativeInterop.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Mono.TextTemplating.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Newtonsoft.Json.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.ClientModel.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.CodeDom.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Composition.Convention.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Composition.Hosting.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Composition.Runtime.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Composition.TypedParts.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Memory.Data.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\linux-x64\native\libmsalruntime.so
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\osx-arm64\native\msalruntime_arm64.dylib
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\osx-x64\native\msalruntime.dylib
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\win-arm64\native\msalruntime_arm64.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\win-x64\native\msalruntime.dll
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\win-x86\native\msalruntime_x86.dll
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Application.dll
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Domain.dll
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Infrastructure.dll
@@ -19,6 +156,7 @@ E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentatio
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.AssemblyInfoInputs.cache
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.AssemblyInfo.cs
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.csproj.CoreCompileInputs.cache
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.MvcApplicationPartsAssemblyInfo.cs
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.MvcApplicationPartsAssemblyInfo.cache
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.RazorAssemblyInfo.cache
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.RazorAssemblyInfo.cs
@@ -29,66 +167,128 @@ E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentatio
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\scopedcss\bundle\QuizApp.Presentation.styles.css
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\scopedcss\projectbundle\QuizApp.Presentation.bundle.scp.css
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ofa40bqe71-{0}-b9sayid5wm-b9sayid5wm.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\j9swiz3yzq-{0}-90yqlj465b-90yqlj465b.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vltxs1u3vm-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\14ipv7q33s-{0}-bqjiyaj88i-bqjiyaj88i.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\rh65p086id-{0}-c2jlpeoesf-c2jlpeoesf.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\eb27mqwgz2-{0}-erw9l3u2r3-erw9l3u2r3.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\9glsckmvxo-{0}-aexeepp0ev-aexeepp0ev.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\hh8ihyobdx-{0}-d7shbmvgxk-d7shbmvgxk.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\bww8ud00yd-{0}-ausgxo2sd3-ausgxo2sd3.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\edcrak57d7-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\sf8kf2lula-{0}-cosvhxvwiu-cosvhxvwiu.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\3tzsqhslk9-{0}-ub07r2b239-ub07r2b239.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\oxk5o6czdw-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\k8b25g0zwc-{0}-b7pk76d08c-b7pk76d08c.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\8axix7wldr-{0}-fsbi9cje9m-fsbi9cje9m.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\d5z9sfpxbi-{0}-rzd6atqjts-rzd6atqjts.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\u8428c4e9i-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\tg53r17ghy-{0}-dxx9fxp4il-dxx9fxp4il.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\nlrl0f3xs3-{0}-jd9uben2k1-jd9uben2k1.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\1fc4q00scq-{0}-khv3u5hwcm-khv3u5hwcm.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\8xykfy6qmd-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vsrbd71spn-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\cynp17w084-{0}-c2oey78nd0-c2oey78nd0.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\7o8oyvng68-{0}-tdbxkamptv-tdbxkamptv.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\h9vwtoirpy-{0}-j5mq2jizvt-j5mq2jizvt.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\o5k23vqhrk-{0}-06098lyss8-06098lyss8.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\iznc766avz-{0}-nvvlpmu67g-nvvlpmu67g.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ns4583i71s-{0}-s35ty4nyc5-s35ty4nyc5.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\47012z8l2l-{0}-pj5nd1wqec-pj5nd1wqec.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\4vzefxwp2m-{0}-46ein0sx1k-46ein0sx1k.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\bh4v3mdph9-{0}-v0zj4ognzu-v0zj4ognzu.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\l186vlgaag-{0}-37tfw0ft22-37tfw0ft22.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\rsc7qacj1u-{0}-hrwsygsryq-hrwsygsryq.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\z408qb6q7a-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\qfr28sqcy1-{0}-ft3s53vfgj-ft3s53vfgj.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\0k1i85ntyh-{0}-6cfz1n2cew-6cfz1n2cew.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\xa379ftczi-{0}-6pdc2jztkx-6pdc2jztkx.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\lr5hmrr0j7-{0}-493y06b0oq-493y06b0oq.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ivy2s9gwh5-{0}-iovd86k7lj-iovd86k7lj.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\higufxz8op-{0}-vr1egmr9el-vr1egmr9el.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\s3tglgz8hr-{0}-kbrnm935zg-kbrnm935zg.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vw9sls9bhj-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ym8tkpcl2i-{0}-y7v9cxd14o-y7v9cxd14o.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\zzna4nrm5w-{0}-notf2xhcfb-notf2xhcfb.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\igscs4x0yk-{0}-h1s4sie4z3-h1s4sie4z3.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\zap00c0tb5-{0}-63fj8s7r0e-63fj8s7r0e.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\pogzkicjpz-{0}-0j3bgjxly4-0j3bgjxly4.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\j3hwsq15kh-{0}-47otxtyo56-47otxtyo56.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\q3naettu8c-{0}-4v8eqarkd7-4v8eqarkd7.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ldxy2n3w6q-{0}-356vix0kms-356vix0kms.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ypthv7q62w-{0}-83jwlth58m-83jwlth58m.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\t6e3b82hrf-{0}-mrlpezrjn3-mrlpezrjn3.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\uocis9wxbx-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\2tikzqlmtu-{0}-ag7o75518u-ag7o75518u.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\9muusbdg0a-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\tpsq5dibur-{0}-0i3buxo5is-0i3buxo5is.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\t0qo7o574p-{0}-o1o13a6vjx-o1o13a6vjx.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\b9lhb08218-{0}-ttgo8qnofa-ttgo8qnofa.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\a3ygkwa5zy-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\nezrqnk58p-{0}-muycvpuwrr-muycvpuwrr.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\v0zgfp0y55-{0}-87fc7y1x7t-87fc7y1x7t.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\yfc7ypekbg-{0}-mlv21k5csn-mlv21k5csn.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vmjhuwvrwv-{0}-b9sayid5wm-b9sayid5wm.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vkrzxxw8c1-{0}-61n19gt1b8-61n19gt1b8.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\jgj5doh3rt-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ojyzkfpg05-{0}-bqjiyaj88i-bqjiyaj88i.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ojyzkfpg05-{0}-t1cqhe9u97-t1cqhe9u97.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\2r09uedmi8-{0}-c2jlpeoesf-c2jlpeoesf.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\djvk8iwli5-{0}-erw9l3u2r3-erw9l3u2r3.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\djvk8iwli5-{0}-sejl45xvog-sejl45xvog.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\zv0hdoxt32-{0}-aexeepp0ev-aexeepp0ev.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\m1430rnll0-{0}-d7shbmvgxk-d7shbmvgxk.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\m1430rnll0-{0}-xvp3kq03qx-xvp3kq03qx.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vebbz47tm9-{0}-ausgxo2sd3-ausgxo2sd3.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\eia1x8pc34-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\eia1x8pc34-{0}-22vffe00uq-22vffe00uq.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\iaetzqh2jp-{0}-cosvhxvwiu-cosvhxvwiu.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\qqvqcgfelp-{0}-ub07r2b239-ub07r2b239.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\qqvqcgfelp-{0}-qesaa3a1fm-qesaa3a1fm.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\g1nm17qpie-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\yw5ql0sw5d-{0}-b7pk76d08c-b7pk76d08c.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\yw5ql0sw5d-{0}-tmc1g35s3z-tmc1g35s3z.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\5qkknq5yb0-{0}-fsbi9cje9m-fsbi9cje9m.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\zifdtt5frm-{0}-rzd6atqjts-rzd6atqjts.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\zifdtt5frm-{0}-rxsg74s51o-rxsg74s51o.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\kfu5li5bdv-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\4hxue1thie-{0}-dxx9fxp4il-dxx9fxp4il.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\4hxue1thie-{0}-q9ht133ko3-q9ht133ko3.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\sy9hi6j6bi-{0}-jd9uben2k1-jd9uben2k1.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\upq6vtdb1n-{0}-khv3u5hwcm-khv3u5hwcm.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\upq6vtdb1n-{0}-gye83jo8yx-gye83jo8yx.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\17i93iabbx-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\wfx4a56qud-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\wfx4a56qud-{0}-wl58j5mj3v-wl58j5mj3v.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\36qk0m2pqg-{0}-c2oey78nd0-c2oey78nd0.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vav13744t5-{0}-tdbxkamptv-tdbxkamptv.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vav13744t5-{0}-d4r6k3f320-d4r6k3f320.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\phn218dk88-{0}-j5mq2jizvt-j5mq2jizvt.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\tp9w19r5be-{0}-06098lyss8-06098lyss8.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\tp9w19r5be-{0}-keugtjm085-keugtjm085.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\3g704bbp8x-{0}-nvvlpmu67g-nvvlpmu67g.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\pg1mepy7an-{0}-s35ty4nyc5-s35ty4nyc5.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\pg1mepy7an-{0}-zub09dkrxp-zub09dkrxp.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\bw3d6disw1-{0}-pj5nd1wqec-pj5nd1wqec.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\uu19jxmx7s-{0}-46ein0sx1k-46ein0sx1k.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\uu19jxmx7s-{0}-43atpzeawx-43atpzeawx.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\hlkgek7n94-{0}-v0zj4ognzu-v0zj4ognzu.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\u080rmyo1y-{0}-37tfw0ft22-37tfw0ft22.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\u080rmyo1y-{0}-ynyaa8k90p-ynyaa8k90p.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\eb015u3qri-{0}-hrwsygsryq-hrwsygsryq.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\e2psm3vnp4-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\e2psm3vnp4-{0}-c63t5i9ira-c63t5i9ira.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\wyzd9azdfy-{0}-ft3s53vfgj-ft3s53vfgj.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\cdk2uxdy1v-{0}-6cfz1n2cew-6cfz1n2cew.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\cdk2uxdy1v-{0}-4094rpi4f9-4094rpi4f9.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\f3g8fcno4n-{0}-6pdc2jztkx-6pdc2jztkx.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\42bgq2u7sq-{0}-493y06b0oq-493y06b0oq.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\42bgq2u7sq-{0}-hd3gran6i8-hd3gran6i8.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\t2yvhjuzsy-{0}-iovd86k7lj-iovd86k7lj.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\d6si68oua9-{0}-vr1egmr9el-vr1egmr9el.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\d6si68oua9-{0}-ltid2c489k-ltid2c489k.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\qj62ojqils-{0}-kbrnm935zg-kbrnm935zg.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\fx6z9sff49-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\fx6z9sff49-{0}-8vyfqsqgz1-8vyfqsqgz1.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\sbak73ot8r-{0}-y7v9cxd14o-y7v9cxd14o.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\9753obfgh3-{0}-notf2xhcfb-notf2xhcfb.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\9753obfgh3-{0}-u9q1upor1n-u9q1upor1n.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\d1yemy2djq-{0}-h1s4sie4z3-h1s4sie4z3.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\wz64pa7eym-{0}-63fj8s7r0e-63fj8s7r0e.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\wz64pa7eym-{0}-4d85u1mtcx-4d85u1mtcx.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\yru8x49xrg-{0}-0j3bgjxly4-0j3bgjxly4.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\v3bu3j8jwx-{0}-47otxtyo56-47otxtyo56.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\dgx449aimc-{0}-4v8eqarkd7-4v8eqarkd7.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\v3bu3j8jwx-{0}-03hjc8e09r-03hjc8e09r.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\dgx449aimc-{0}-48y08845bh-48y08845bh.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\iqftc4ae3z-{0}-356vix0kms-356vix0kms.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\wxa96qv9cb-{0}-83jwlth58m-83jwlth58m.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\tsycmittgn-{0}-mrlpezrjn3-mrlpezrjn3.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\svrfpq89ly-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\z6wx39n4m7-{0}-ag7o75518u-ag7o75518u.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\svrfpq89ly-{0}-worgj0nhwm-worgj0nhwm.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\z6wx39n4m7-{0}-gk0pw8i4co-gk0pw8i4co.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\698js6d9k3-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\1vf26osclf-{0}-0i3buxo5is-0i3buxo5is.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\81uyidsv2l-{0}-o1o13a6vjx-o1o13a6vjx.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\1vf26osclf-{0}-d6nrnj6jjx-d6nrnj6jjx.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\81uyidsv2l-{0}-m9qm4tazc0-m9qm4tazc0.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\yh2ipnobmp-{0}-ttgo8qnofa-ttgo8qnofa.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\hmbaobpux4-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
-E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\0f0ivxt585-{0}-muycvpuwrr-muycvpuwrr.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\hmbaobpux4-{0}-jjsuc0puko-jjsuc0puko.gz
+E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\0f0ivxt585-{0}-9vr69e8ynj-9vr69e8ynj.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\uc4sxripvg-{0}-87fc7y1x7t-87fc7y1x7t.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\hp4ulpa41u-{0}-mlv21k5csn-mlv21k5csn.gz
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\s6olhsumra-{0}-f9vvimyl4d-f9vvimyl4d.gz
@@ -105,310 +305,3 @@ E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentatio
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.pdb
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.genruntimeconfig.cache
 E:\Programming\BackEnd\C# practice\C# exercise\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\ref\QuizApp.Presentation.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\appsettings.Development.json
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\appsettings.json
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Presentation.staticwebassets.runtime.json
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Presentation.staticwebassets.endpoints.json
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Presentation.exe
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Presentation.deps.json
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Presentation.runtimeconfig.json
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Presentation.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Presentation.pdb
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Application.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Domain.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Infrastructure.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Application.pdb
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Infrastructure.pdb
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\QuizApp.Domain.pdb
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.csproj.AssemblyReference.cache
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\rpswa.dswa.cache.json
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.AssemblyInfoInputs.cache
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.AssemblyInfo.cs
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.csproj.CoreCompileInputs.cache
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.RazorAssemblyInfo.cache
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.RazorAssemblyInfo.cs
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.sourcelink.json
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\rjimswa.dswa.cache.json
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\scopedcss\bundle\QuizApp.Presentation.styles.css
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\scopedcss\projectbundle\QuizApp.Presentation.bundle.scp.css
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vmjhuwvrwv-{0}-b9sayid5wm-b9sayid5wm.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vkrzxxw8c1-{0}-61n19gt1b8-61n19gt1b8.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\jgj5doh3rt-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ojyzkfpg05-{0}-t1cqhe9u97-t1cqhe9u97.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\2r09uedmi8-{0}-c2jlpeoesf-c2jlpeoesf.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\djvk8iwli5-{0}-sejl45xvog-sejl45xvog.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\zv0hdoxt32-{0}-aexeepp0ev-aexeepp0ev.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\m1430rnll0-{0}-xvp3kq03qx-xvp3kq03qx.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vebbz47tm9-{0}-ausgxo2sd3-ausgxo2sd3.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\eia1x8pc34-{0}-22vffe00uq-22vffe00uq.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\iaetzqh2jp-{0}-cosvhxvwiu-cosvhxvwiu.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\qqvqcgfelp-{0}-qesaa3a1fm-qesaa3a1fm.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\g1nm17qpie-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\yw5ql0sw5d-{0}-tmc1g35s3z-tmc1g35s3z.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\5qkknq5yb0-{0}-fsbi9cje9m-fsbi9cje9m.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\zifdtt5frm-{0}-rxsg74s51o-rxsg74s51o.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\kfu5li5bdv-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\4hxue1thie-{0}-q9ht133ko3-q9ht133ko3.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\sy9hi6j6bi-{0}-jd9uben2k1-jd9uben2k1.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\upq6vtdb1n-{0}-gye83jo8yx-gye83jo8yx.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\17i93iabbx-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\wfx4a56qud-{0}-wl58j5mj3v-wl58j5mj3v.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\36qk0m2pqg-{0}-c2oey78nd0-c2oey78nd0.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vav13744t5-{0}-d4r6k3f320-d4r6k3f320.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\phn218dk88-{0}-j5mq2jizvt-j5mq2jizvt.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\tp9w19r5be-{0}-keugtjm085-keugtjm085.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\3g704bbp8x-{0}-nvvlpmu67g-nvvlpmu67g.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\pg1mepy7an-{0}-zub09dkrxp-zub09dkrxp.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\bw3d6disw1-{0}-pj5nd1wqec-pj5nd1wqec.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\uu19jxmx7s-{0}-43atpzeawx-43atpzeawx.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\hlkgek7n94-{0}-v0zj4ognzu-v0zj4ognzu.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\u080rmyo1y-{0}-ynyaa8k90p-ynyaa8k90p.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\eb015u3qri-{0}-hrwsygsryq-hrwsygsryq.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\e2psm3vnp4-{0}-c63t5i9ira-c63t5i9ira.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\wyzd9azdfy-{0}-ft3s53vfgj-ft3s53vfgj.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\cdk2uxdy1v-{0}-4094rpi4f9-4094rpi4f9.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\f3g8fcno4n-{0}-6pdc2jztkx-6pdc2jztkx.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\42bgq2u7sq-{0}-hd3gran6i8-hd3gran6i8.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\t2yvhjuzsy-{0}-iovd86k7lj-iovd86k7lj.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\d6si68oua9-{0}-ltid2c489k-ltid2c489k.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\qj62ojqils-{0}-kbrnm935zg-kbrnm935zg.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\fx6z9sff49-{0}-8vyfqsqgz1-8vyfqsqgz1.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\sbak73ot8r-{0}-y7v9cxd14o-y7v9cxd14o.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\9753obfgh3-{0}-u9q1upor1n-u9q1upor1n.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\d1yemy2djq-{0}-h1s4sie4z3-h1s4sie4z3.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\wz64pa7eym-{0}-4d85u1mtcx-4d85u1mtcx.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\yru8x49xrg-{0}-0j3bgjxly4-0j3bgjxly4.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\v3bu3j8jwx-{0}-03hjc8e09r-03hjc8e09r.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\dgx449aimc-{0}-48y08845bh-48y08845bh.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\iqftc4ae3z-{0}-356vix0kms-356vix0kms.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\wxa96qv9cb-{0}-83jwlth58m-83jwlth58m.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\tsycmittgn-{0}-mrlpezrjn3-mrlpezrjn3.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\svrfpq89ly-{0}-worgj0nhwm-worgj0nhwm.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\z6wx39n4m7-{0}-gk0pw8i4co-gk0pw8i4co.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\698js6d9k3-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\1vf26osclf-{0}-d6nrnj6jjx-d6nrnj6jjx.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\81uyidsv2l-{0}-m9qm4tazc0-m9qm4tazc0.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\yh2ipnobmp-{0}-ttgo8qnofa-ttgo8qnofa.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\hmbaobpux4-{0}-jjsuc0puko-jjsuc0puko.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\0f0ivxt585-{0}-9vr69e8ynj-9vr69e8ynj.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\uc4sxripvg-{0}-87fc7y1x7t-87fc7y1x7t.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\hp4ulpa41u-{0}-mlv21k5csn-mlv21k5csn.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\s6olhsumra-{0}-f9vvimyl4d-f9vvimyl4d.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\htmczakvcp-{0}-f9vvimyl4d-f9vvimyl4d.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\staticwebassets.build.json
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\staticwebassets.build.json.cache
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\staticwebassets.development.json
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\staticwebassets.build.endpoints.json
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp..AFCEB977.Up2Date
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\refint\QuizApp.Presentation.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.pdb
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.genruntimeconfig.cache
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\ref\QuizApp.Presentation.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Azure.Core.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Azure.Identity.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Identity.Client.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Identity.Client.Broker.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Identity.Client.NativeInterop.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.ClientModel.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Memory.Data.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\linux-x64\native\libmsalruntime.so
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\osx-arm64\native\msalruntime_arm64.dylib
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\osx-x64\native\msalruntime.dylib
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\win-arm64\native\msalruntime_arm64.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\win-x64\native\msalruntime.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\runtimes\win-x86\native\msalruntime_x86.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Humanizer.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Build.Framework.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Mono.TextTemplating.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Newtonsoft.Json.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.CodeDom.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Composition.AttributedModel.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Composition.Convention.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Composition.Hosting.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Composition.Runtime.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\System.Composition.TypedParts.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.UI.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\QuizApp.Presentation.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ofa40bqe71-{0}-b9sayid5wm-b9sayid5wm.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\j9swiz3yzq-{0}-90yqlj465b-90yqlj465b.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vltxs1u3vm-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\14ipv7q33s-{0}-bqjiyaj88i-bqjiyaj88i.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\rh65p086id-{0}-c2jlpeoesf-c2jlpeoesf.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\eb27mqwgz2-{0}-erw9l3u2r3-erw9l3u2r3.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\9glsckmvxo-{0}-aexeepp0ev-aexeepp0ev.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\hh8ihyobdx-{0}-d7shbmvgxk-d7shbmvgxk.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\bww8ud00yd-{0}-ausgxo2sd3-ausgxo2sd3.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\edcrak57d7-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\sf8kf2lula-{0}-cosvhxvwiu-cosvhxvwiu.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\3tzsqhslk9-{0}-ub07r2b239-ub07r2b239.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\oxk5o6czdw-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\k8b25g0zwc-{0}-b7pk76d08c-b7pk76d08c.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\8axix7wldr-{0}-fsbi9cje9m-fsbi9cje9m.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\d5z9sfpxbi-{0}-rzd6atqjts-rzd6atqjts.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\u8428c4e9i-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\tg53r17ghy-{0}-dxx9fxp4il-dxx9fxp4il.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\nlrl0f3xs3-{0}-jd9uben2k1-jd9uben2k1.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\1fc4q00scq-{0}-khv3u5hwcm-khv3u5hwcm.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\8xykfy6qmd-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vsrbd71spn-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\cynp17w084-{0}-c2oey78nd0-c2oey78nd0.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\7o8oyvng68-{0}-tdbxkamptv-tdbxkamptv.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\h9vwtoirpy-{0}-j5mq2jizvt-j5mq2jizvt.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\o5k23vqhrk-{0}-06098lyss8-06098lyss8.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\iznc766avz-{0}-nvvlpmu67g-nvvlpmu67g.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ns4583i71s-{0}-s35ty4nyc5-s35ty4nyc5.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\47012z8l2l-{0}-pj5nd1wqec-pj5nd1wqec.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\4vzefxwp2m-{0}-46ein0sx1k-46ein0sx1k.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\bh4v3mdph9-{0}-v0zj4ognzu-v0zj4ognzu.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\l186vlgaag-{0}-37tfw0ft22-37tfw0ft22.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\rsc7qacj1u-{0}-hrwsygsryq-hrwsygsryq.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\z408qb6q7a-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\qfr28sqcy1-{0}-ft3s53vfgj-ft3s53vfgj.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\0k1i85ntyh-{0}-6cfz1n2cew-6cfz1n2cew.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\xa379ftczi-{0}-6pdc2jztkx-6pdc2jztkx.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\lr5hmrr0j7-{0}-493y06b0oq-493y06b0oq.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ivy2s9gwh5-{0}-iovd86k7lj-iovd86k7lj.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\higufxz8op-{0}-vr1egmr9el-vr1egmr9el.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\s3tglgz8hr-{0}-kbrnm935zg-kbrnm935zg.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\vw9sls9bhj-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ym8tkpcl2i-{0}-y7v9cxd14o-y7v9cxd14o.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\zzna4nrm5w-{0}-notf2xhcfb-notf2xhcfb.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\igscs4x0yk-{0}-h1s4sie4z3-h1s4sie4z3.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\zap00c0tb5-{0}-63fj8s7r0e-63fj8s7r0e.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\pogzkicjpz-{0}-0j3bgjxly4-0j3bgjxly4.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\j3hwsq15kh-{0}-47otxtyo56-47otxtyo56.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\q3naettu8c-{0}-4v8eqarkd7-4v8eqarkd7.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ldxy2n3w6q-{0}-356vix0kms-356vix0kms.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\ypthv7q62w-{0}-83jwlth58m-83jwlth58m.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\t6e3b82hrf-{0}-mrlpezrjn3-mrlpezrjn3.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\uocis9wxbx-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\2tikzqlmtu-{0}-ag7o75518u-ag7o75518u.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\9muusbdg0a-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\tpsq5dibur-{0}-0i3buxo5is-0i3buxo5is.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\t0qo7o574p-{0}-o1o13a6vjx-o1o13a6vjx.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\b9lhb08218-{0}-ttgo8qnofa-ttgo8qnofa.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\a3ygkwa5zy-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\nezrqnk58p-{0}-muycvpuwrr-muycvpuwrr.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\v0zgfp0y55-{0}-87fc7y1x7t-87fc7y1x7t.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\compressed\yfc7ypekbg-{0}-mlv21k5csn-mlv21k5csn.gz
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\FluentValidation.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\FluentValidation.AspNetCore.dll
-C:\Users\raffi\Desktop\QuizApp.Clean\src\src\Presentation\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
