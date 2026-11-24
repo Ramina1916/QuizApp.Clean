@@ -40,7 +40,7 @@ public class RegisterModel : PageModel
         public string Email { get; set; } = string.Empty;
 
         [Required]
-        [StringLength(100, MinimumLength = 12)]
+        [StringLength(100, MinimumLength = 8)]
         [DataType(DataType.Password)]
         public string Password { get; set; } = string.Empty;
 
