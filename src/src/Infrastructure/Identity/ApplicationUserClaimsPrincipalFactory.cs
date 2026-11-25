@@ -7,9 +7,7 @@ namespace QuizApp.Infrastructure.Identity;
 public sealed class ApplicationUserClaimsPrincipalFactory
     : UserClaimsPrincipalFactory<ApplicationUser>
 {
-    public ApplicationUserClaimsPrincipalFactory(
-        UserManager<ApplicationUser> userManager,
-        IOptions<IdentityOptions> optionsAccessor)
+    public ApplicationUserClaimsPrincipalFactory(UserManager<ApplicationUser> userManager, IOptions<IdentityOptions> optionsAccessor)
         : base(userManager, optionsAccessor)
     {
     }
